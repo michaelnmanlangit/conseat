@@ -1,4 +1,6 @@
-﻿namespace conseat
+﻿using System;
+
+namespace conseat
 {
     partial class ucCreateEvent
     {
@@ -309,5 +311,6 @@
         private System.Windows.Forms.TextBox txtPriceGenAd;
         private System.Windows.Forms.PictureBox pbArtistImage;
         private System.Windows.Forms.Button btnUploadImage;
+
     }
 }

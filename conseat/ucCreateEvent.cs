@@ -10,11 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace conseat
 {
     public partial class ucCreateEvent : UserControl
     {
-        private string imagePath = ""; // ✅ Properly placed global variable
+        private string imagePath = "";
 
         public ucCreateEvent()
         {
@@ -32,7 +33,7 @@ namespace conseat
             txtPriceGenAd.Clear();
             txtPriceUpperBox.Clear();
 
-            // ✅ Reset image and path
+            
             pbArtistImage.Image = null;
             imagePath = "";
         }
@@ -101,11 +102,11 @@ namespace conseat
                 DBConnection db = new DBConnection();
                 db.OpenConnection();
 
-                // ✅ Read image as byte[]
+                
                 byte[] imageBytes = File.ReadAllBytes(imagePath);
 
                 string query = @"INSERT INTO concert_events 
-                         (event_name, artist_name, venue, event_date, event_time, price_vip, price_gen_ad, price_upper_box, artist_image)
+                         (event_name, artist_name, venue, event_date, event_time, price_vip, price_gen_ad, price_upper_box, image)
                          VALUES 
                          (@event, @artist, @venue, @date, @time, @vip, @genad, @upperbox, @image)";
 
@@ -138,6 +139,15 @@ namespace conseat
         private void pbArtistImage_Click(object sender, EventArgs e)
         {
 
+        }
+
+        
+
+        
+
+        private void picBack_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

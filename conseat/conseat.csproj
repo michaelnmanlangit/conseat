@@ -140,6 +140,18 @@
     <Compile Include="PasswordHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ucConcertCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucConcertCard.Designer.cs">
+      <DependentUpon>ucConcertCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucConcertEvents.cs" />
     <Compile Include="ucManageSales.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -203,13 +215,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="ucConcertCard.resx">
+      <DependentUpon>ucConcertCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucCreateEvent.resx">
       <DependentUpon>ucCreateEvent.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +236,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\517238827_717085247981486_3205119874936882807_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-svgrepo-com.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
