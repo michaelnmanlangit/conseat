@@ -1,6 +1,6 @@
 ﻿namespace conseat
 {
-    partial class Form2
+    partial class frmSignUp
     {
         /// <summary>
         /// Required designer variable.
@@ -28,51 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
             this.label5 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.btnSignUp = new System.Windows.Forms.Button();
+            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.txtMiddleName = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2Form1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.linkSignUp = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(38, 346);
+            this.label5.Location = new System.Drawing.Point(39, 330);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 17);
+            this.label5.Size = new System.Drawing.Size(73, 34);
             this.label5.TabIndex = 34;
-            this.label5.Text = "Confirm Password";
+            this.label5.Text = "Confirm\r\n Password";
             // 
-            // btnLogin
+            // btnSignUp
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(122, 414);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(98, 28);
-            this.btnLogin.TabIndex = 33;
-            this.btnLogin.Text = "SIGN UP";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.Location = new System.Drawing.Point(122, 414);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(98, 28);
+            this.btnSignUp.TabIndex = 33;
+            this.btnSignUp.Text = "SIGN UP";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
-            // textBox6
+            // txtConfirmPassword
             // 
-            this.textBox6.Location = new System.Drawing.Point(153, 344);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(160, 20);
-            this.textBox6.TabIndex = 32;
+            this.txtConfirmPassword.Location = new System.Drawing.Point(132, 344);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(181, 20);
+            this.txtConfirmPassword.TabIndex = 32;
+            this.txtConfirmPassword.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -96,45 +100,47 @@
             this.label3.TabIndex = 30;
             this.label3.Text = "Email";
             // 
-            // textBox5
+            // txtPassword
             // 
-            this.textBox5.Location = new System.Drawing.Point(132, 300);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(180, 20);
-            this.textBox5.TabIndex = 29;
+            this.txtPassword.Location = new System.Drawing.Point(132, 300);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(180, 20);
+            this.txtPassword.TabIndex = 29;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // textBox4
+            // txtEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(132, 252);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 20);
-            this.textBox4.TabIndex = 28;
+            this.txtEmail.Location = new System.Drawing.Point(132, 252);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(180, 20);
+            this.txtEmail.TabIndex = 28;
             // 
-            // textBox3
+            // txtLastName
             // 
-            this.textBox3.Location = new System.Drawing.Point(132, 205);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 20);
-            this.textBox3.TabIndex = 27;
+            this.txtLastName.Location = new System.Drawing.Point(132, 205);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(180, 20);
+            this.txtLastName.TabIndex = 27;
             // 
-            // textBox2
+            // txtMiddleName
             // 
-            this.textBox2.Location = new System.Drawing.Point(132, 160);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 20);
-            this.textBox2.TabIndex = 26;
+            this.txtMiddleName.Location = new System.Drawing.Point(132, 160);
+            this.txtMiddleName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMiddleName.Name = "txtMiddleName";
+            this.txtMiddleName.Size = new System.Drawing.Size(180, 20);
+            this.txtMiddleName.TabIndex = 26;
             // 
-            // textBox1
+            // txtFirstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 118);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 20);
-            this.textBox1.TabIndex = 25;
+            this.txtFirstName.Location = new System.Drawing.Point(132, 118);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(180, 20);
+            this.txtFirstName.TabIndex = 25;
             // 
             // label2
             // 
@@ -169,29 +175,58 @@
             this.label2Form1.TabIndex = 22;
             this.label2Form1.Text = "Last name";
             // 
-            // Form2
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(87, 472);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 13);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Already have an Account?";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // linkSignUp
+            // 
+            this.linkSignUp.AutoSize = true;
+            this.linkSignUp.BackColor = System.Drawing.Color.Transparent;
+            this.linkSignUp.LinkColor = System.Drawing.Color.BlueViolet;
+            this.linkSignUp.Location = new System.Drawing.Point(220, 472);
+            this.linkSignUp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkSignUp.Name = "linkSignUp";
+            this.linkSignUp.Size = new System.Drawing.Size(36, 13);
+            this.linkSignUp.TabIndex = 35;
+            this.linkSignUp.TabStop = true;
+            this.linkSignUp.Text = "Log in";
+            this.linkSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignUp_LinkClicked);
+            // 
+            // frmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(350, 560);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.linkSignUp);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.btnSignUp);
+            this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.txtMiddleName);
+            this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2Form1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
+            this.Name = "frmSignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -202,17 +237,19 @@
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button btnSignUp;
+        private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.TextBox txtMiddleName;
+        private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2Form1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel linkSignUp;
     }
 }
