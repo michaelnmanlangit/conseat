@@ -49,7 +49,7 @@
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(829, 33);
+            this.pnlHeader.Size = new System.Drawing.Size(334, 33);
             this.pnlHeader.TabIndex = 1;
             this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -81,7 +81,7 @@
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlNav.Location = new System.Drawing.Point(0, 33);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(829, 33);
+            this.pnlNav.Size = new System.Drawing.Size(334, 33);
             this.pnlNav.TabIndex = 2;
             this.pnlNav.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlNav_Paint);
             // 
@@ -117,10 +117,11 @@
             // 
             // pnlMainContent
             // 
+            this.pnlMainContent.BackColor = System.Drawing.Color.Transparent;
             this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainContent.Location = new System.Drawing.Point(0, 66);
             this.pnlMainContent.Name = "pnlMainContent";
-            this.pnlMainContent.Size = new System.Drawing.Size(829, 416);
+            this.pnlMainContent.Size = new System.Drawing.Size(334, 455);
             this.pnlMainContent.TabIndex = 3;
             this.pnlMainContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainContent_Paint);
             // 
@@ -130,7 +131,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(829, 482);
+            this.ClientSize = new System.Drawing.Size(334, 521);
             this.Controls.Add(this.pnlMainContent);
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.pnlHeader);
