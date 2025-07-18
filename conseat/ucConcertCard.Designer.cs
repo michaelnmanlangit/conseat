@@ -30,13 +30,14 @@
         {
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.picArtist = new System.Windows.Forms.PictureBox();
             this.lblArtistName = new System.Windows.Forms.Label();
+            this.picArtist = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picArtist)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEdit
             // 
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.Location = new System.Drawing.Point(0, 128);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(140, 35);
@@ -47,6 +48,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Location = new System.Drawing.Point(0, 169);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(140, 35);
@@ -54,6 +56,19 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            // 
+            // lblArtistName
+            // 
+            this.lblArtistName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblArtistName.AutoSize = true;
+            this.lblArtistName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblArtistName.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblArtistName.Location = new System.Drawing.Point(54, 110);
+            this.lblArtistName.Name = "lblArtistName";
+            this.lblArtistName.Size = new System.Drawing.Size(35, 13);
+            this.lblArtistName.TabIndex = 5;
+            this.lblArtistName.Text = "label1";
+            this.lblArtistName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picArtist
             // 
@@ -68,18 +83,6 @@
             this.picArtist.TabIndex = 1;
             this.picArtist.TabStop = false;
             this.picArtist.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // lblArtistName
-            // 
-            this.lblArtistName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblArtistName.AutoSize = true;
-            this.lblArtistName.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblArtistName.Location = new System.Drawing.Point(54, 110);
-            this.lblArtistName.Name = "lblArtistName";
-            this.lblArtistName.Size = new System.Drawing.Size(35, 13);
-            this.lblArtistName.TabIndex = 5;
-            this.lblArtistName.Text = "label1";
-            this.lblArtistName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ucConcertCard
             // 

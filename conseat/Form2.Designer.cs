@@ -214,6 +214,7 @@
             // 
             // picEyeOpen
             // 
+            this.picEyeOpen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picEyeOpen.Image = global::conseat.Properties.Resources.eye_svgrepo_com;
             this.picEyeOpen.Location = new System.Drawing.Point(292, 301);
             this.picEyeOpen.Name = "picEyeOpen";
@@ -225,6 +226,7 @@
             // 
             // picEyeClosed
             // 
+            this.picEyeClosed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picEyeClosed.Image = global::conseat.Properties.Resources.eye_closed_svgrepo_com;
             this.picEyeClosed.Location = new System.Drawing.Point(293, 301);
             this.picEyeClosed.Name = "picEyeClosed";
@@ -236,6 +238,7 @@
             // 
             // picConfirmEyeOpen
             // 
+            this.picConfirmEyeOpen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picConfirmEyeOpen.Image = global::conseat.Properties.Resources.eye_svgrepo_com;
             this.picConfirmEyeOpen.Location = new System.Drawing.Point(294, 345);
             this.picConfirmEyeOpen.Name = "picConfirmEyeOpen";
@@ -247,6 +250,7 @@
             // 
             // picConfirmEyeClosed
             // 
+            this.picConfirmEyeClosed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picConfirmEyeClosed.Image = global::conseat.Properties.Resources.eye_closed_svgrepo_com;
             this.picConfirmEyeClosed.Location = new System.Drawing.Point(295, 345);
             this.picConfirmEyeClosed.Name = "picConfirmEyeClosed";

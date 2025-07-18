@@ -70,7 +70,7 @@ namespace conseat
                     if (role == "Admin")
                         new frmAdminDashboard(user).Show();
                     else
-                        new frmCustomerHome(user).Show();
+                        new frmCustomHome(user).Show();
                 }
                 else
                 {

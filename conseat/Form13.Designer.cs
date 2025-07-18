@@ -61,6 +61,7 @@
             // 
             // picLogout
             // 
+            this.picLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLogout.Image = global::conseat.Properties.Resources.sign_out_svgrepo_com__1_;
             this.picLogout.Location = new System.Drawing.Point(291, 7);
             this.picLogout.Name = "picLogout";
@@ -74,6 +75,7 @@
             // 
             this.picLogo.BackgroundImage = global::conseat.Properties.Resources._517238827_717085247981486_3205119874936882807_n;
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLogo.Location = new System.Drawing.Point(0, 3);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(62, 50);
@@ -96,6 +98,7 @@
             // 
             // btnCreateEvent
             // 
+            this.btnCreateEvent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreateEvent.Location = new System.Drawing.Point(156, 4);
             this.btnCreateEvent.Name = "btnCreateEvent";
             this.btnCreateEvent.Size = new System.Drawing.Size(81, 23);
@@ -106,6 +109,7 @@
             // 
             // btnManageSales
             // 
+            this.btnManageSales.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnManageSales.Location = new System.Drawing.Point(243, 4);
             this.btnManageSales.Name = "btnManageSales";
             this.btnManageSales.Size = new System.Drawing.Size(88, 23);
@@ -126,6 +130,7 @@
             // 
             // txtSearch
             // 
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtSearch.Location = new System.Drawing.Point(172, 3);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(103, 20);
@@ -134,6 +139,7 @@
             // 
             // cmbSort
             // 
+            this.cmbSort.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbSort.FormattingEnabled = true;
             this.cmbSort.Location = new System.Drawing.Point(291, 3);
             this.cmbSort.Name = "cmbSort";

@@ -138,6 +138,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(123, 440);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
@@ -196,6 +197,7 @@
             // picExit
             // 
             this.picExit.BackColor = System.Drawing.Color.Transparent;
+            this.picExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picExit.Image = global::conseat.Properties.Resources.exit_point_svgrepo_com__1_;
             this.picExit.Location = new System.Drawing.Point(284, 12);
             this.picExit.Name = "picExit";
@@ -207,6 +209,7 @@
             // 
             // picEyeOpen
             // 
+            this.picEyeOpen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picEyeOpen.Image = global::conseat.Properties.Resources.eye_svgrepo_com;
             this.picEyeOpen.Location = new System.Drawing.Point(252, 356);
             this.picEyeOpen.Name = "picEyeOpen";
@@ -249,6 +252,7 @@
             this.Controls.Add(this.label2Form1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

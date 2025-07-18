@@ -1,6 +1,6 @@
 ﻿namespace conseat
 {
-    partial class Form3
+    partial class frmCustomHome
     {
         /// <summary>
         /// Required designer variable.
@@ -28,242 +28,142 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmdEvent = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomHome));
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.picLogout = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.pnlSearchSort = new System.Windows.Forms.Panel();
+            this.cmbSort = new System.Windows.Forms.ComboBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.pnlMainContent = new System.Windows.Forms.Panel();
+            this.flpConcerts = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.pnlSearchSort.SuspendLayout();
+            this.pnlMainContent.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button3
+            // pnlHeader
             // 
-            this.button3.Location = new System.Drawing.Point(181, 501);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 19);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "Buy tickets";
-            this.button3.UseVisualStyleBackColor = true;
+            this.pnlHeader.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHeader.Controls.Add(this.picLogout);
+            this.pnlHeader.Controls.Add(this.picLogo);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(334, 54);
+            this.pnlHeader.TabIndex = 2;
             // 
-            // button4
+            // picLogout
             // 
-            this.button4.Location = new System.Drawing.Point(65, 501);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 19);
-            this.button4.TabIndex = 32;
-            this.button4.Text = "Buy tickets";
-            this.button4.UseVisualStyleBackColor = true;
+            this.picLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picLogout.Image = global::conseat.Properties.Resources.sign_out_svgrepo_com__1_;
+            this.picLogout.Location = new System.Drawing.Point(291, 7);
+            this.picLogout.Name = "picLogout";
+            this.picLogout.Size = new System.Drawing.Size(40, 40);
+            this.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogout.TabIndex = 0;
+            this.picLogout.TabStop = false;
+            this.picLogout.Click += new System.EventHandler(this.picLogout_Click);
             // 
-            // textBox4
+            // picLogo
             // 
-            this.textBox4.Location = new System.Drawing.Point(181, 468);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(76, 20);
-            this.textBox4.TabIndex = 31;
-            this.textBox4.Text = "Artist Name";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.picLogo.BackgroundImage = global::conseat.Properties.Resources._517238827_717085247981486_3205119874936882807_n;
+            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picLogo.Location = new System.Drawing.Point(0, 3);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(62, 50);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 2;
+            this.picLogo.TabStop = false;
+            this.picLogo.Click += new System.EventHandler(this.picLogo_Click);
             // 
-            // textBox5
+            // pnlSearchSort
             // 
-            this.textBox5.Location = new System.Drawing.Point(65, 468);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(76, 20);
-            this.textBox5.TabIndex = 30;
-            this.textBox5.Text = "Artist Name";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pnlSearchSort.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSearchSort.Controls.Add(this.txtSearch);
+            this.pnlSearchSort.Controls.Add(this.cmbSort);
+            this.pnlSearchSort.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSearchSort.Location = new System.Drawing.Point(0, 54);
+            this.pnlSearchSort.Name = "pnlSearchSort";
+            this.pnlSearchSort.Size = new System.Drawing.Size(334, 43);
+            this.pnlSearchSort.TabIndex = 3;
             // 
-            // pictureBox5
+            // cmbSort
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(181, 338);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(75, 114);
-            this.pictureBox5.TabIndex = 29;
-            this.pictureBox5.TabStop = false;
+            this.cmbSort.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbSort.FormattingEnabled = true;
+            this.cmbSort.Location = new System.Drawing.Point(282, 6);
+            this.cmbSort.Name = "cmbSort";
+            this.cmbSort.Size = new System.Drawing.Size(40, 21);
+            this.cmbSort.TabIndex = 11;
+            this.cmbSort.SelectedIndexChanged += new System.EventHandler(this.cmbSort_SelectedIndexChanged);
             // 
-            // pictureBox6
+            // txtSearch
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(65, 338);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(75, 114);
-            this.pictureBox6.TabIndex = 28;
-            this.pictureBox6.TabStop = false;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSearch.Location = new System.Drawing.Point(173, 7);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(103, 20);
+            this.txtSearch.TabIndex = 10;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // button2
+            // pnlMainContent
             // 
-            this.button2.Location = new System.Drawing.Point(181, 295);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 19);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Buy tickets";
-            this.button2.UseVisualStyleBackColor = true;
+            this.pnlMainContent.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMainContent.Controls.Add(this.flpConcerts);
+            this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainContent.Location = new System.Drawing.Point(0, 97);
+            this.pnlMainContent.Name = "pnlMainContent";
+            this.pnlMainContent.Size = new System.Drawing.Size(334, 424);
+            this.pnlMainContent.TabIndex = 4;
             // 
-            // button1
+            // flpConcerts
             // 
-            this.button1.Location = new System.Drawing.Point(65, 295);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 19);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Buy tickets";
-            this.button1.UseVisualStyleBackColor = true;
+            this.flpConcerts.AutoScroll = true;
+            this.flpConcerts.BackColor = System.Drawing.Color.Transparent;
+            this.flpConcerts.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flpConcerts.Location = new System.Drawing.Point(0, 0);
+            this.flpConcerts.Name = "flpConcerts";
+            this.flpConcerts.Size = new System.Drawing.Size(334, 424);
+            this.flpConcerts.TabIndex = 0;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(181, 262);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(76, 20);
-            this.textBox3.TabIndex = 25;
-            this.textBox3.Text = "Artist Name";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(65, 262);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(76, 20);
-            this.textBox2.TabIndex = 24;
-            this.textBox2.Text = "Artist Name";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(236, 1);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 24);
-            this.pictureBox4.TabIndex = 23;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(270, 1);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 24);
-            this.pictureBox3.TabIndex = 22;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(181, 132);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 114);
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(65, 132);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 114);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
-            // cmdEvent
-            // 
-            this.cmdEvent.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.cmdEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdEvent.FormattingEnabled = true;
-            this.cmdEvent.Location = new System.Drawing.Point(65, 71);
-            this.cmdEvent.Margin = new System.Windows.Forms.Padding(2);
-            this.cmdEvent.Name = "cmdEvent";
-            this.cmdEvent.Size = new System.Drawing.Size(192, 28);
-            this.cmdEvent.TabIndex = 19;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(34, 1);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(57, 26);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.Text = "LOGO";
-            // 
-            // Form3
+            // frmCustomHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(334, 521);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.cmdEvent);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pnlMainContent);
+            this.Controls.Add(this.pnlSearchSort);
+            this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form3";
+            this.Name = "frmCustomHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Form3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.pnlSearchSort.ResumeLayout(false);
+            this.pnlSearchSort.PerformLayout();
+            this.pnlMainContent.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmdEvent;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.PictureBox picLogout;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Panel pnlSearchSort;
+        private System.Windows.Forms.ComboBox cmbSort;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Panel pnlMainContent;
+        private System.Windows.Forms.FlowLayoutPanel flpConcerts;
     }
 }

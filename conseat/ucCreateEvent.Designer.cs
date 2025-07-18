@@ -182,6 +182,7 @@ namespace conseat
             // 
             // dtpTime
             // 
+            this.dtpTime.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpTime.CustomFormat = "hh:mm tt";
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpTime.Location = new System.Drawing.Point(144, 247);
@@ -192,6 +193,7 @@ namespace conseat
             // 
             // dtpDate
             // 
+            this.dtpDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDate.Location = new System.Drawing.Point(144, 224);
             this.dtpDate.Name = "dtpDate";
@@ -200,6 +202,7 @@ namespace conseat
             // 
             // btnClear
             // 
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear.Location = new System.Drawing.Point(169, 382);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
@@ -210,6 +213,7 @@ namespace conseat
             // 
             // btnSave
             // 
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Location = new System.Drawing.Point(77, 382);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
@@ -241,6 +245,7 @@ namespace conseat
             // 
             // btnUploadImage
             // 
+            this.btnUploadImage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUploadImage.Location = new System.Drawing.Point(121, 106);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(75, 23);
@@ -287,6 +292,7 @@ namespace conseat
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ucCreateEvent";
             this.Size = new System.Drawing.Size(334, 521);
             this.Load += new System.EventHandler(this.ucCreateEvent_Load);

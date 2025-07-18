@@ -83,12 +83,6 @@
     <Compile Include="Form13.Designer.cs">
       <DependentUpon>Form13.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form14.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form14.Designer.cs">
-      <DependentUpon>Form14.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,7 +145,12 @@
     <Compile Include="ucConcertCard.Designer.cs">
       <DependentUpon>ucConcertCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucConcertEvents.cs" />
+    <Compile Include="ucCustomerConcertCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCustomerConcertCard.Designer.cs">
+      <DependentUpon>ucCustomerConcertCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucManageSales.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form13.resx">
       <DependentUpon>Form13.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form14.resx">
-      <DependentUpon>Form14.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -217,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucCreateEvent.resx">
       <DependentUpon>ucCreateEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCustomerConcertCard.resx">
+      <DependentUpon>ucCustomerConcertCard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
