@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminDashboard));
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.picLogout = new System.Windows.Forms.PictureBox();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnCreateEvent = new System.Windows.Forms.Button();
             this.btnManageSales = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.cmbSort = new System.Windows.Forms.ComboBox();
             this.flpConcerts = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlMainContent = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlNav.SuspendLayout();
             this.pnlMainContent.SuspendLayout();
@@ -50,14 +50,25 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHeader.Controls.Add(this.picLogout);
             this.pnlHeader.Controls.Add(this.picLogo);
-            this.pnlHeader.Controls.Add(this.btnLogout);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(334, 54);
             this.pnlHeader.TabIndex = 1;
             this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // picLogout
+            // 
+            this.picLogout.Image = global::conseat.Properties.Resources.sign_out_svgrepo_com__1_;
+            this.picLogout.Location = new System.Drawing.Point(291, 7);
+            this.picLogout.Name = "picLogout";
+            this.picLogout.Size = new System.Drawing.Size(40, 40);
+            this.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogout.TabIndex = 0;
+            this.picLogout.TabStop = false;
+            this.picLogout.Click += new System.EventHandler(this.picLogout_Click);
             // 
             // picLogo
             // 
@@ -70,16 +81,6 @@
             this.picLogo.TabIndex = 2;
             this.picLogo.TabStop = false;
             this.picLogo.Click += new System.EventHandler(this.piclogo_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(275, 12);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(56, 23);
-            this.btnLogout.TabIndex = 1;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // pnlNav
             // 
@@ -116,7 +117,8 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(12, 20);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(12, 5);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(80, 13);
             this.lblTitle.TabIndex = 6;
@@ -124,28 +126,18 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(115, 17);
+            this.txtSearch.Location = new System.Drawing.Point(172, 3);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(103, 20);
             this.txtSearch.TabIndex = 7;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(215, 15);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(51, 23);
-            this.btnSearch.TabIndex = 8;
-            this.btnSearch.Text = "button1";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // cmbSort
             // 
             this.cmbSort.FormattingEnabled = true;
-            this.cmbSort.Location = new System.Drawing.Point(267, 16);
+            this.cmbSort.Location = new System.Drawing.Point(291, 3);
             this.cmbSort.Name = "cmbSort";
-            this.cmbSort.Size = new System.Drawing.Size(64, 21);
+            this.cmbSort.Size = new System.Drawing.Size(40, 21);
             this.cmbSort.TabIndex = 9;
             this.cmbSort.SelectedIndexChanged += new System.EventHandler(this.cmbSort_SelectedIndexChanged);
             // 
@@ -163,7 +155,6 @@
             this.pnlMainContent.BackColor = System.Drawing.Color.Transparent;
             this.pnlMainContent.Controls.Add(this.flpConcerts);
             this.pnlMainContent.Controls.Add(this.cmbSort);
-            this.pnlMainContent.Controls.Add(this.btnSearch);
             this.pnlMainContent.Controls.Add(this.txtSearch);
             this.pnlMainContent.Controls.Add(this.lblTitle);
             this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -189,6 +180,7 @@
             this.Text = "Form13";
             this.Load += new System.EventHandler(this.frmAdminDashboard_Load);
             this.pnlHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlNav.ResumeLayout(false);
             this.pnlMainContent.ResumeLayout(false);
@@ -200,15 +192,14 @@
         #endregion
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Panel pnlNav;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnCreateEvent;
         private System.Windows.Forms.Button btnManageSales;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox cmbSort;
         private System.Windows.Forms.FlowLayoutPanel flpConcerts;
         private System.Windows.Forms.Panel pnlMainContent;
+        private System.Windows.Forms.PictureBox picLogout;
     }
 }

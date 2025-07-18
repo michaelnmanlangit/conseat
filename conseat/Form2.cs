@@ -13,9 +13,18 @@ namespace conseat
 {
     public partial class frmSignUp : Form
     {
+
+
         public frmSignUp()
         {
             InitializeComponent();
+            txtPassword.UseSystemPasswordChar = true;
+            picEyeOpen.Visible = false;
+            picEyeClosed.Visible = true;
+
+            txtConfirmPassword.UseSystemPasswordChar = true;
+            picConfirmEyeOpen.Visible = false;
+            picConfirmEyeClosed.Visible = true;
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -77,5 +86,44 @@ namespace conseat
             }
         }
 
+        private void frmSignUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void picEyeOpen_Click_1(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+            picEyeOpen.Visible = false;
+            picEyeClosed.Visible = true;
+        }
+
+        private void picEyeClosed_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = false;
+            picEyeClosed.Visible = false;
+            picEyeOpen.Visible = true;
+        }
+
+        private void picConfirmEyeOpen_Click(object sender, EventArgs e)
+        {
+            txtConfirmPassword.UseSystemPasswordChar = true;
+            picConfirmEyeOpen.Visible = false;
+            picConfirmEyeClosed.Visible = true;
+        }
+
+        private void picConfirmEyeClosed_Click(object sender, EventArgs e)
+        {
+            txtConfirmPassword.UseSystemPasswordChar = false;
+            picConfirmEyeClosed.Visible = false;
+            picConfirmEyeOpen.Visible = true;
+        }
     }
+    
 }

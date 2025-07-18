@@ -44,6 +44,14 @@
             this.label2Form1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.linkSignUp = new System.Windows.Forms.LinkLabel();
+            this.picEyeOpen = new System.Windows.Forms.PictureBox();
+            this.picEyeClosed = new System.Windows.Forms.PictureBox();
+            this.picConfirmEyeOpen = new System.Windows.Forms.PictureBox();
+            this.picConfirmEyeClosed = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyeOpen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyeClosed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picConfirmEyeOpen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picConfirmEyeClosed)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -73,6 +81,7 @@
             // 
             this.txtConfirmPassword.Location = new System.Drawing.Point(132, 344);
             this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfirmPassword.MaxLength = 20;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(181, 20);
             this.txtConfirmPassword.TabIndex = 32;
@@ -104,11 +113,12 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(132, 300);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(180, 20);
             this.txtPassword.TabIndex = 29;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtEmail
             // 
@@ -202,6 +212,50 @@
             this.linkSignUp.Text = "Log in";
             this.linkSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignUp_LinkClicked);
             // 
+            // picEyeOpen
+            // 
+            this.picEyeOpen.Image = global::conseat.Properties.Resources.eye_svgrepo_com;
+            this.picEyeOpen.Location = new System.Drawing.Point(292, 301);
+            this.picEyeOpen.Name = "picEyeOpen";
+            this.picEyeOpen.Size = new System.Drawing.Size(18, 18);
+            this.picEyeOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEyeOpen.TabIndex = 38;
+            this.picEyeOpen.TabStop = false;
+            this.picEyeOpen.Click += new System.EventHandler(this.picEyeOpen_Click_1);
+            // 
+            // picEyeClosed
+            // 
+            this.picEyeClosed.Image = global::conseat.Properties.Resources.eye_closed_svgrepo_com;
+            this.picEyeClosed.Location = new System.Drawing.Point(293, 301);
+            this.picEyeClosed.Name = "picEyeClosed";
+            this.picEyeClosed.Size = new System.Drawing.Size(18, 18);
+            this.picEyeClosed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEyeClosed.TabIndex = 37;
+            this.picEyeClosed.TabStop = false;
+            this.picEyeClosed.Click += new System.EventHandler(this.picEyeClosed_Click);
+            // 
+            // picConfirmEyeOpen
+            // 
+            this.picConfirmEyeOpen.Image = global::conseat.Properties.Resources.eye_svgrepo_com;
+            this.picConfirmEyeOpen.Location = new System.Drawing.Point(294, 345);
+            this.picConfirmEyeOpen.Name = "picConfirmEyeOpen";
+            this.picConfirmEyeOpen.Size = new System.Drawing.Size(18, 18);
+            this.picConfirmEyeOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picConfirmEyeOpen.TabIndex = 40;
+            this.picConfirmEyeOpen.TabStop = false;
+            this.picConfirmEyeOpen.Click += new System.EventHandler(this.picConfirmEyeOpen_Click);
+            // 
+            // picConfirmEyeClosed
+            // 
+            this.picConfirmEyeClosed.Image = global::conseat.Properties.Resources.eye_closed_svgrepo_com;
+            this.picConfirmEyeClosed.Location = new System.Drawing.Point(295, 345);
+            this.picConfirmEyeClosed.Name = "picConfirmEyeClosed";
+            this.picConfirmEyeClosed.Size = new System.Drawing.Size(18, 18);
+            this.picConfirmEyeClosed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picConfirmEyeClosed.TabIndex = 39;
+            this.picConfirmEyeClosed.TabStop = false;
+            this.picConfirmEyeClosed.Click += new System.EventHandler(this.picConfirmEyeClosed_Click);
+            // 
             // frmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +263,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(350, 560);
+            this.Controls.Add(this.picConfirmEyeOpen);
+            this.Controls.Add(this.picConfirmEyeClosed);
+            this.Controls.Add(this.picEyeOpen);
+            this.Controls.Add(this.picEyeClosed);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.linkSignUp);
             this.Controls.Add(this.label5);
@@ -229,6 +287,11 @@
             this.Name = "frmSignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.frmSignUp_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picEyeOpen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyeClosed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picConfirmEyeOpen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picConfirmEyeClosed)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,5 +314,9 @@
         private System.Windows.Forms.Label label2Form1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkSignUp;
+        private System.Windows.Forms.PictureBox picEyeOpen;
+        private System.Windows.Forms.PictureBox picEyeClosed;
+        private System.Windows.Forms.PictureBox picConfirmEyeOpen;
+        private System.Windows.Forms.PictureBox picConfirmEyeClosed;
     }
 }

@@ -28,6 +28,12 @@ namespace conseat
             picArtist.Image = artistImage;
         }
 
+
+        private void CenterLabel()
+        {
+            lblArtistName.Left = (this.Width - lblArtistName.Width) / 2;
+        }
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
             // Raise event to parent form
@@ -56,7 +62,7 @@ namespace conseat
 
         private void ucConcertCard_Load(object sender, EventArgs e)
         {
-
+            CenterLabel();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

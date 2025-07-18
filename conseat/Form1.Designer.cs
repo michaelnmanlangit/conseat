@@ -41,7 +41,13 @@
             this.label2Form1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.picExit = new System.Windows.Forms.PictureBox();
+            this.picEyeOpen = new System.Windows.Forms.PictureBox();
+            this.picEyeClosed = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyeOpen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyeClosed)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -172,6 +178,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(92, 355);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(180, 20);
             this.txtPassword.TabIndex = 18;
@@ -181,9 +188,44 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(92, 304);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.MaxLength = 30;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(180, 20);
             this.txtEmail.TabIndex = 17;
+            // 
+            // picExit
+            // 
+            this.picExit.BackColor = System.Drawing.Color.Transparent;
+            this.picExit.Image = global::conseat.Properties.Resources.exit_point_svgrepo_com__1_;
+            this.picExit.Location = new System.Drawing.Point(284, 12);
+            this.picExit.Name = "picExit";
+            this.picExit.Size = new System.Drawing.Size(34, 32);
+            this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picExit.TabIndex = 28;
+            this.picExit.TabStop = false;
+            this.picExit.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // picEyeOpen
+            // 
+            this.picEyeOpen.Image = global::conseat.Properties.Resources.eye_svgrepo_com;
+            this.picEyeOpen.Location = new System.Drawing.Point(252, 356);
+            this.picEyeOpen.Name = "picEyeOpen";
+            this.picEyeOpen.Size = new System.Drawing.Size(18, 18);
+            this.picEyeOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEyeOpen.TabIndex = 30;
+            this.picEyeOpen.TabStop = false;
+            this.picEyeOpen.Click += new System.EventHandler(this.picEyeOpen_Click);
+            // 
+            // picEyeClosed
+            // 
+            this.picEyeClosed.Image = global::conseat.Properties.Resources.eye_closed_svgrepo_com;
+            this.picEyeClosed.Location = new System.Drawing.Point(253, 356);
+            this.picEyeClosed.Name = "picEyeClosed";
+            this.picEyeClosed.Size = new System.Drawing.Size(18, 18);
+            this.picEyeClosed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEyeClosed.TabIndex = 29;
+            this.picEyeClosed.TabStop = false;
+            this.picEyeClosed.Click += new System.EventHandler(this.picEyeClosed_Click);
             // 
             // frmLogin
             // 
@@ -192,6 +234,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(330, 560);
+            this.Controls.Add(this.picEyeOpen);
+            this.Controls.Add(this.picEyeClosed);
+            this.Controls.Add(this.picExit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1Form1);
@@ -210,6 +255,9 @@
             this.Text = "Login Form";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyeOpen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyeClosed)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,6 +277,9 @@
         private System.Windows.Forms.Label label2Form1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.PictureBox picExit;
+        private System.Windows.Forms.PictureBox picEyeOpen;
+        private System.Windows.Forms.PictureBox picEyeClosed;
     }
 }
 

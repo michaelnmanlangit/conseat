@@ -13,9 +13,13 @@ namespace conseat
 {
     public partial class frmLogin : Form
     {
+
         public frmLogin()
         {
             InitializeComponent();
+            txtPassword.UseSystemPasswordChar = true;
+            picEyeOpen.Visible = false;   // open eye hidden initially
+            picEyeClosed.Visible = true;  // closed eye visible initially
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -90,6 +94,30 @@ namespace conseat
             this.Hide();
             new frmSignUp().Show();
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to exit the application?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void picEyeOpen_Click(object sender, EventArgs e)
+        {
+            // Show password
+            txtPassword.UseSystemPasswordChar = true;     // Hide password
+            picEyeOpen.Visible = false;                   // Hide open eye
+            picEyeClosed.Visible = true;                  // Show closed eye
+        }
+
+        private void picEyeClosed_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = false;    // Show password
+            picEyeOpen.Visible = true;                    // Show open eye
+            picEyeClosed.Visible = false;                 // Hide closed eye
         }
     }
 }

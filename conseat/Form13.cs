@@ -26,7 +26,6 @@ namespace conseat
         //form dashboard load
         private void frmAdminDashboard_Load(object sender, EventArgs e)
         {
-            picLogo.Image = Properties.Resources.logo;
 
             SetupSortOptions();
             LoadConcertDashboard();
@@ -56,7 +55,6 @@ namespace conseat
 
             pnlMainContent.Controls.Add(lblTitle);
             pnlMainContent.Controls.Add(txtSearch);
-            pnlMainContent.Controls.Add(btnSearch);
             pnlMainContent.Controls.Add(cmbSort);
             pnlMainContent.Controls.Add(flpConcerts);
 
@@ -206,10 +204,7 @@ namespace conseat
             RefreshConcerts();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            RefreshConcerts();
-        }
+       
 
         private void cmbSort_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -224,17 +219,7 @@ namespace conseat
         }
 
         // Logout button
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                frmLogin loginForm = new frmLogin();
-                loginForm.Show();
-                this.Close();
-            }
-        }
-
+        
         
 
         private void panel1_Paint(object sender, PaintEventArgs e) {
@@ -249,5 +234,15 @@ namespace conseat
         
         }
 
+        private void picLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                frmLogin loginForm = new frmLogin();
+                loginForm.Show();
+                this.Close();
+            }
+        }
     }
 }

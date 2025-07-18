@@ -30,7 +30,6 @@ namespace conseat
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCreateEvent));
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,15 +50,16 @@ namespace conseat
             this.txtPriceVIP = new System.Windows.Forms.TextBox();
             this.txtPriceUpperBox = new System.Windows.Forms.TextBox();
             this.txtPriceGenAd = new System.Windows.Forms.TextBox();
-            this.pbArtistImage = new System.Windows.Forms.PictureBox();
             this.btnUploadImage = new System.Windows.Forms.Button();
+            this.pbArtistImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbArtistImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 183);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(58, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
@@ -68,7 +68,8 @@ namespace conseat
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(98, 19);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(98, 6);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(134, 13);
             this.lblTitle.TabIndex = 1;
@@ -77,7 +78,8 @@ namespace conseat
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 214);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(58, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 2;
@@ -86,7 +88,8 @@ namespace conseat
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 239);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(58, 206);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 3;
@@ -95,7 +98,8 @@ namespace conseat
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(58, 263);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(58, 230);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 4;
@@ -105,7 +109,8 @@ namespace conseat
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(58, 287);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(58, 254);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 5;
@@ -114,7 +119,8 @@ namespace conseat
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(58, 312);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(58, 279);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 13);
             this.label7.TabIndex = 6;
@@ -123,7 +129,8 @@ namespace conseat
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(69, 337);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(69, 304);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 7;
@@ -132,7 +139,8 @@ namespace conseat
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(69, 359);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(69, 326);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 13);
             this.label9.TabIndex = 8;
@@ -142,7 +150,8 @@ namespace conseat
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(69, 382);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(69, 349);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 13);
             this.label10.TabIndex = 9;
@@ -150,14 +159,14 @@ namespace conseat
             // 
             // txtEventName
             // 
-            this.txtEventName.Location = new System.Drawing.Point(144, 175);
+            this.txtEventName.Location = new System.Drawing.Point(144, 142);
             this.txtEventName.Name = "txtEventName";
             this.txtEventName.Size = new System.Drawing.Size(100, 20);
             this.txtEventName.TabIndex = 10;
             // 
             // txtArtistName
             // 
-            this.txtArtistName.Location = new System.Drawing.Point(144, 207);
+            this.txtArtistName.Location = new System.Drawing.Point(144, 174);
             this.txtArtistName.Name = "txtArtistName";
             this.txtArtistName.Size = new System.Drawing.Size(100, 20);
             this.txtArtistName.TabIndex = 11;
@@ -165,7 +174,7 @@ namespace conseat
             // cmbVenue
             // 
             this.cmbVenue.FormattingEnabled = true;
-            this.cmbVenue.Location = new System.Drawing.Point(144, 233);
+            this.cmbVenue.Location = new System.Drawing.Point(144, 200);
             this.cmbVenue.Name = "cmbVenue";
             this.cmbVenue.Size = new System.Drawing.Size(100, 21);
             this.cmbVenue.TabIndex = 12;
@@ -175,7 +184,7 @@ namespace conseat
             // 
             this.dtpTime.CustomFormat = "hh:mm tt";
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTime.Location = new System.Drawing.Point(144, 280);
+            this.dtpTime.Location = new System.Drawing.Point(144, 247);
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.ShowUpDown = true;
             this.dtpTime.Size = new System.Drawing.Size(100, 20);
@@ -184,14 +193,14 @@ namespace conseat
             // dtpDate
             // 
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(144, 257);
+            this.dtpDate.Location = new System.Drawing.Point(144, 224);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(100, 20);
             this.dtpDate.TabIndex = 14;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(169, 415);
+            this.btnClear.Location = new System.Drawing.Point(169, 382);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 15;
@@ -201,7 +210,7 @@ namespace conseat
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(77, 415);
+            this.btnSave.Location = new System.Drawing.Point(77, 382);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 16;
@@ -211,38 +220,28 @@ namespace conseat
             // 
             // txtPriceVIP
             // 
-            this.txtPriceVIP.Location = new System.Drawing.Point(144, 334);
+            this.txtPriceVIP.Location = new System.Drawing.Point(144, 301);
             this.txtPriceVIP.Name = "txtPriceVIP";
             this.txtPriceVIP.Size = new System.Drawing.Size(100, 20);
             this.txtPriceVIP.TabIndex = 17;
             // 
             // txtPriceUpperBox
             // 
-            this.txtPriceUpperBox.Location = new System.Drawing.Point(144, 356);
+            this.txtPriceUpperBox.Location = new System.Drawing.Point(144, 323);
             this.txtPriceUpperBox.Name = "txtPriceUpperBox";
             this.txtPriceUpperBox.Size = new System.Drawing.Size(100, 20);
             this.txtPriceUpperBox.TabIndex = 18;
             // 
             // txtPriceGenAd
             // 
-            this.txtPriceGenAd.Location = new System.Drawing.Point(144, 379);
+            this.txtPriceGenAd.Location = new System.Drawing.Point(144, 346);
             this.txtPriceGenAd.Name = "txtPriceGenAd";
             this.txtPriceGenAd.Size = new System.Drawing.Size(100, 20);
             this.txtPriceGenAd.TabIndex = 19;
             // 
-            // pbArtistImage
-            // 
-            this.pbArtistImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbArtistImage.Location = new System.Drawing.Point(101, 50);
-            this.pbArtistImage.Name = "pbArtistImage";
-            this.pbArtistImage.Size = new System.Drawing.Size(122, 70);
-            this.pbArtistImage.TabIndex = 20;
-            this.pbArtistImage.TabStop = false;
-            this.pbArtistImage.Click += new System.EventHandler(this.pbArtistImage_Click);
-            // 
             // btnUploadImage
             // 
-            this.btnUploadImage.Location = new System.Drawing.Point(121, 126);
+            this.btnUploadImage.Location = new System.Drawing.Point(121, 106);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(75, 23);
             this.btnUploadImage.TabIndex = 21;
@@ -250,11 +249,21 @@ namespace conseat
             this.btnUploadImage.UseVisualStyleBackColor = true;
             this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
             // 
+            // pbArtistImage
+            // 
+            this.pbArtistImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbArtistImage.Location = new System.Drawing.Point(101, 30);
+            this.pbArtistImage.Name = "pbArtistImage";
+            this.pbArtistImage.Size = new System.Drawing.Size(122, 70);
+            this.pbArtistImage.TabIndex = 20;
+            this.pbArtistImage.TabStop = false;
+            this.pbArtistImage.Click += new System.EventHandler(this.pbArtistImage_Click);
+            // 
             // ucCreateEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.btnUploadImage);
             this.Controls.Add(this.pbArtistImage);

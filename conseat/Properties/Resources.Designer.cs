@@ -10,9 +10,8 @@
 
 namespace conseat.Properties {
     using System;
-    using System.Drawing;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -24,12 +23,7 @@ namespace conseat.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        internal static Image logo {
-            get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
-                return ((Image)(obj));
-            }
-        }
+        
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -82,6 +76,66 @@ namespace conseat.Properties {
         internal static System.Drawing.Bitmap back_svgrepo_com1 {
             get {
                 object obj = ResourceManager.GetObject("back-svgrepo-com1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit_point_svgrepo_com__1_ {
+            get {
+                object obj = ResourceManager.GetObject("exit-point-svgrepo-com (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit_svgrepo_com__1_ {
+            get {
+                object obj = ResourceManager.GetObject("exit-svgrepo-com (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_closed_svgrepo_com {
+            get {
+                object obj = ResourceManager.GetObject("eye-closed-svgrepo-com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_svgrepo_com {
+            get {
+                object obj = ResourceManager.GetObject("eye-svgrepo-com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sign_out_svgrepo_com {
+            get {
+                object obj = ResourceManager.GetObject("sign-out-svgrepo-com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sign_out_svgrepo_com__1_ {
+            get {
+                object obj = ResourceManager.GetObject("sign-out-svgrepo-com (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
