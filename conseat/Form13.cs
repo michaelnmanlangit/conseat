@@ -10,8 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace conseat
 
+namespace conseat
 {
     public partial class frmAdminDashboard : Form
     {
@@ -21,30 +21,105 @@ namespace conseat
         {
             InitializeComponent();
             _currentUser = user;
-
-
         }
 
+        //form dashboard load
+        private void frmAdminDashboard_Load(object sender, EventArgs e)
+        {
+            picLogo.Image = Properties.Resources.logo;
+
+            SetupSortOptions();
+            LoadConcertDashboard();
+        }
+
+        //sort options in the combo box
+        private void SetupSortOptions()
+        {
+            cmbSort.Items.Clear();
+            cmbSort.Items.AddRange(new string[] { "A-Z", "Z-A", "Time" });
+            cmbSort.SelectedIndex = 0;
+        }
+
+
+
+        //load a user control into the main content panel
         private void LoadControl(UserControl control)
         {
             pnlMainContent.Controls.Clear();
             control.Dock = DockStyle.Fill;
             pnlMainContent.Controls.Add(control);
         }
+        //load the concert dashboard
+        private void LoadConcertDashboard()
+        {
+            pnlMainContent.Controls.Clear();
+
+            pnlMainContent.Controls.Add(lblTitle);
+            pnlMainContent.Controls.Add(txtSearch);
+            pnlMainContent.Controls.Add(btnSearch);
+            pnlMainContent.Controls.Add(cmbSort);
+            pnlMainContent.Controls.Add(flpConcerts);
+
+            SetupSortOptions();
+            LoadConcerts();
+        }
+        //logoclick to load the concert dashboard
+        private void piclogo_Click(object sender, EventArgs e)
+        {
+            LoadConcertDashboard(); // Logo click → go home
+        }
+        // Button click events to create new concert 
+        private void btnCreateEvent_Click(object sender, EventArgs e)
+        {
+            LoadControl(new ucCreateEvent());
+        }
+        // Button click event to manage users
+        private void btnManageSales_Click(object sender, EventArgs e)
+        {
+            LoadControl(new ucManageSales());
+        }
 
 
-        private void LoadConcerts(string keyword = "")
+        // Method to load concerts with keyword and sorting
+        private void LoadConcerts(string keyword = "", string sort = "")
         {
             flpConcerts.Controls.Clear();
 
             DBConnection db = new DBConnection();
             MySqlConnection conn = db.GetConnection();
 
-            string query = "SELECT id, artist_name, image FROM concert_events";
+            List<string> filters = new List<string>();
+            string baseQuery = "SELECT id, artist_name, image FROM concert_events";
 
             if (!string.IsNullOrEmpty(keyword))
             {
-                query += " WHERE artist_name LIKE @keyword";
+                filters.Add("artist_name LIKE @keyword");
+            }
+
+            string query = baseQuery;
+
+            if (filters.Count > 0)
+                query += " WHERE " + string.Join(" AND ", filters);
+
+            // Apply sorting
+            switch (sort)
+            {
+                case "A-Z":
+                    query += " ORDER BY artist_name ASC";
+                    break;
+                case "Z-A":
+                    query += " ORDER BY artist_name DESC";
+                    break;
+                case "Time":
+                    query = baseQuery;
+                    if (filters.Count > 0)
+                        query += " WHERE " + string.Join(" AND ", filters);
+
+                    query += " ORDER BY event_time ASC";
+                    break;
+                default:
+                    query += " ORDER BY artist_name ASC";
+                    break;
             }
 
             try
@@ -54,19 +129,15 @@ namespace conseat
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     if (!string.IsNullOrEmpty(keyword))
-                    {
-                        cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
-                    }
+                        cmd.Parameters.AddWithValue("@keyword", $"%{keyword}%");
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            ucConcertCard card = new ucConcertCard();
                             string id = reader["id"].ToString();
                             string artistName = reader["artist_name"].ToString();
-
-                            Image image = null;
+                            Image image = Properties.Resources.back_svgrepo_com1;
 
                             if (!reader.IsDBNull(reader.GetOrdinal("image")))
                             {
@@ -76,11 +147,8 @@ namespace conseat
                                     image = Image.FromStream(ms);
                                 }
                             }
-                            else
-                            {
-                                image = Properties.Resources.back_svgrepo_com1; // or any default
-                            }
 
+                            var card = new ucConcertCard();
                             card.SetData(id, artistName, image);
                             card.OnEditClicked += (s, e) => EditConcert(card.ConcertID);
                             card.OnDeleteClicked += (s, e) => DeleteConcert(card.ConcertID);
@@ -99,17 +167,16 @@ namespace conseat
                 db.CloseConnection();
             }
         }
-
-
+        // Method to edit a concert
         private void EditConcert(string concertID)
         {
             LoadControl(new ucCreateEvent(concertID));
-
         }
-
+        // Method to delete a concert
         private void DeleteConcert(string concertID)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to delete this concert?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
             if (result == DialogResult.Yes)
             {
                 try
@@ -124,7 +191,7 @@ namespace conseat
                     }
 
                     db.CloseConnection();
-                    LoadConcerts(); // Refresh after deletion
+                    LoadConcerts();
                 }
                 catch (Exception ex)
                 {
@@ -133,61 +200,54 @@ namespace conseat
             }
         }
 
-
-        private void frmAdminDashboard_Load(object sender, EventArgs e)
+        //search and sort events
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            LoadConcerts();
-            picLogo.Image = Properties.Resources.logo;
+            RefreshConcerts();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            RefreshConcerts();
+        }
+
+        private void cmbSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RefreshConcerts();
+        }
+
+        private void RefreshConcerts()
+        {
+            string keyword = txtSearch.Text.Trim();
+            string sortOption = cmbSort.SelectedItem?.ToString() ?? "A-Z";
+            LoadConcerts(keyword, sortOption);
+        }
+
+        // Logout button
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                frmLogin loginForm = new frmLogin();
+                loginForm.Show();
+                this.Close();
+            }
         }
 
         
 
-
-
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+        private void panel1_Paint(object sender, PaintEventArgs e) {
 
         }
 
-        private void btnCreateEvent_Click(object sender, EventArgs e)
-
-        {
-            LoadControl(new ucCreateEvent());
-
-
-
-            
-        }
-
-        private void btnManageSales_Click(object sender, EventArgs e)
-        {
-            LoadControl(new ucManageSales());
-        }
-
-        private void btnReports_Click(object sender, EventArgs e)
-        {
-            LoadControl(new ucReports());
-        }
-
-        private void pnlMainContent_Paint(object sender, PaintEventArgs e)
-        {
+        private void pnlMainContent_Paint(object sender, PaintEventArgs e) {
 
         }
 
-        private void pnlNav_Paint(object sender, PaintEventArgs e)
-        {
-
+        private void pnlNav_Paint(object sender, PaintEventArgs e) {
+        
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void piclogo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

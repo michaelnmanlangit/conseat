@@ -24,7 +24,12 @@ namespace conseat.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        internal static readonly Image logo;
+        internal static Image logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((Image)(obj));
+            }
+        }
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;

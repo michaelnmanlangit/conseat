@@ -35,12 +35,12 @@
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnCreateEvent = new System.Windows.Forms.Button();
             this.btnManageSales = new System.Windows.Forms.Button();
-            this.pnlMainContent = new System.Windows.Forms.Panel();
-            this.flpConcerts = new System.Windows.Forms.FlowLayoutPanel();
-            this.cboSort = new System.Windows.Forms.ComboBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cmbSort = new System.Windows.Forms.ComboBox();
+            this.flpConcerts = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlMainContent = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlNav.SuspendLayout();
@@ -113,36 +113,22 @@
             this.btnManageSales.UseVisualStyleBackColor = true;
             this.btnManageSales.Click += new System.EventHandler(this.btnManageSales_Click);
             // 
-            // pnlMainContent
+            // lblTitle
             // 
-            this.pnlMainContent.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMainContent.Controls.Add(this.flpConcerts);
-            this.pnlMainContent.Controls.Add(this.cboSort);
-            this.pnlMainContent.Controls.Add(this.btnSearch);
-            this.pnlMainContent.Controls.Add(this.txtSearch);
-            this.pnlMainContent.Controls.Add(this.lblTitle);
-            this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainContent.Location = new System.Drawing.Point(0, 87);
-            this.pnlMainContent.Name = "pnlMainContent";
-            this.pnlMainContent.Size = new System.Drawing.Size(334, 434);
-            this.pnlMainContent.TabIndex = 3;
-            this.pnlMainContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainContent_Paint);
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Location = new System.Drawing.Point(12, 20);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(80, 13);
+            this.lblTitle.TabIndex = 6;
+            this.lblTitle.Text = "Concert Events";
             // 
-            // flpConcerts
+            // txtSearch
             // 
-            this.flpConcerts.AutoScroll = true;
-            this.flpConcerts.Location = new System.Drawing.Point(3, 43);
-            this.flpConcerts.Name = "flpConcerts";
-            this.flpConcerts.Size = new System.Drawing.Size(328, 400);
-            this.flpConcerts.TabIndex = 10;
-            // 
-            // cboSort
-            // 
-            this.cboSort.FormattingEnabled = true;
-            this.cboSort.Location = new System.Drawing.Point(267, 16);
-            this.cboSort.Name = "cboSort";
-            this.cboSort.Size = new System.Drawing.Size(64, 21);
-            this.cboSort.TabIndex = 9;
+            this.txtSearch.Location = new System.Drawing.Point(115, 17);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(103, 20);
+            this.txtSearch.TabIndex = 7;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnSearch
             // 
@@ -152,22 +138,40 @@
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "button1";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtSearch
+            // cmbSort
             // 
-            this.txtSearch.Location = new System.Drawing.Point(115, 17);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(103, 20);
-            this.txtSearch.TabIndex = 7;
+            this.cmbSort.FormattingEnabled = true;
+            this.cmbSort.Location = new System.Drawing.Point(267, 16);
+            this.cmbSort.Name = "cmbSort";
+            this.cmbSort.Size = new System.Drawing.Size(64, 21);
+            this.cmbSort.TabIndex = 9;
+            this.cmbSort.SelectedIndexChanged += new System.EventHandler(this.cmbSort_SelectedIndexChanged);
             // 
-            // lblTitle
+            // flpConcerts
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(12, 20);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(80, 13);
-            this.lblTitle.TabIndex = 6;
-            this.lblTitle.Text = "Concert Events";
+            this.flpConcerts.AutoScroll = true;
+            this.flpConcerts.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flpConcerts.Location = new System.Drawing.Point(0, 36);
+            this.flpConcerts.Name = "flpConcerts";
+            this.flpConcerts.Size = new System.Drawing.Size(334, 398);
+            this.flpConcerts.TabIndex = 10;
+            // 
+            // pnlMainContent
+            // 
+            this.pnlMainContent.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMainContent.Controls.Add(this.flpConcerts);
+            this.pnlMainContent.Controls.Add(this.cmbSort);
+            this.pnlMainContent.Controls.Add(this.btnSearch);
+            this.pnlMainContent.Controls.Add(this.txtSearch);
+            this.pnlMainContent.Controls.Add(this.lblTitle);
+            this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainContent.Location = new System.Drawing.Point(0, 87);
+            this.pnlMainContent.Name = "pnlMainContent";
+            this.pnlMainContent.Size = new System.Drawing.Size(334, 434);
+            this.pnlMainContent.TabIndex = 3;
+            this.pnlMainContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainContent_Paint);
             // 
             // frmAdminDashboard
             // 
@@ -199,12 +203,12 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnCreateEvent;
         private System.Windows.Forms.Button btnManageSales;
-        private System.Windows.Forms.Panel pnlMainContent;
-        private System.Windows.Forms.ComboBox cboSort;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.FlowLayoutPanel flpConcerts;
         private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ComboBox cmbSort;
+        private System.Windows.Forms.FlowLayoutPanel flpConcerts;
+        private System.Windows.Forms.Panel pnlMainContent;
     }
 }
