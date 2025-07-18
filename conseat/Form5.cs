@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace conseat
 {
-    public partial class Form5 : Form
+    public partial class frmSelectSeat : Form
     {
-        public Form5()
+        public frmSelectSeat()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to go back?",
+                "Confirm",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

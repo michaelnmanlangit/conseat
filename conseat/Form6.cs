@@ -16,5 +16,10 @@ namespace conseat
         {
             InitializeComponent();
         }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
