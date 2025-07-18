@@ -15,7 +15,8 @@ namespace conseat
         public DBConnection()
         {
             // XAMPP default: server = localhost, user = root, no password
-            string connectionString = "server=localhost;uid=root;pwd=;database=concertdb;";
+            string connectionString = "server=localhost;user id=root;password=;database=concertdb;AllowLoadLocalInfile=true;default command timeout=600;Max Pool Size=100;";
+
             connection = new MySqlConnection(connectionString);
         }
 

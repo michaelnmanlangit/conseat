@@ -103,8 +103,8 @@ namespace conseat
 
         private void EditConcert(string concertID)
         {
-            MessageBox.Show("Edit concert with ID: " + concertID);
-            // TODO: Open your edit form and pass the concertID
+            LoadControl(new ucCreateEvent(concertID));
+
         }
 
         private void DeleteConcert(string concertID)

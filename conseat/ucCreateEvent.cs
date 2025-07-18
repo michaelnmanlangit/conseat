@@ -17,10 +17,78 @@ namespace conseat
     {
         private string imagePath = "";
 
+        private string concertID;
+        private bool isEditMode = false;
+
         public ucCreateEvent()
         {
             InitializeComponent();
+            isEditMode = false;
+            
         }
+
+        // Overloaded constructor for editing an existing concert
+        public ucCreateEvent(string id)
+        {
+            InitializeComponent();
+            concertID = id;
+            isEditMode = true;
+            LoadConcertData();
+
+            lblTitle.Text = "  Edit Concert Event";
+        }
+
+
+        private void LoadConcertData()
+        {
+            DBConnection db = new DBConnection();
+            MySqlConnection conn = db.GetConnection();
+
+            try
+            {
+                db.OpenConnection();
+
+                string query = "SELECT * FROM concert_events WHERE id = @id";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", concertID);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            txtEventName.Text = reader["event_name"].ToString();
+                            txtArtistName.Text = reader["artist_name"].ToString();
+                            cmbVenue.SelectedItem = reader["venue"].ToString();
+                            dtpDate.Value = Convert.ToDateTime(reader["event_date"]);
+                            dtpTime.Value = DateTime.Today.Add((TimeSpan)reader["event_time"]);
+                            txtPriceVIP.Text = reader["price_vip"].ToString();
+                            txtPriceGenAd.Text = reader["price_gen_ad"].ToString();
+                            txtPriceUpperBox.Text = reader["price_upper_box"].ToString();
+
+                            if (!reader.IsDBNull(reader.GetOrdinal("image")))
+                            {
+                                byte[] imgBytes = (byte[])reader["image"];
+                                using (MemoryStream ms = new MemoryStream(imgBytes))
+                                {
+                                    pbArtistImage.Image = Image.FromStream(ms);
+                                    pbArtistImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading concert data: " + ex.Message);
+            }
+            finally
+            {
+                db.CloseConnection();
+            }
+        }
+
 
         private void ClearFields()
         {
@@ -32,8 +100,6 @@ namespace conseat
             txtPriceVIP.Clear();
             txtPriceGenAd.Clear();
             txtPriceUpperBox.Clear();
-
-            
             pbArtistImage.Image = null;
             imagePath = "";
         }
@@ -60,7 +126,7 @@ namespace conseat
 
         private void ucCreateEvent_Load(object sender, EventArgs e)
         {
-            cmbVenue.Items.Clear(); // Optional: clear existing items
+            cmbVenue.Items.Clear(); // clear existing items
             cmbVenue.Items.AddRange(new string[]
             {
                 "Smart Araneta Coliseum",
@@ -84,16 +150,14 @@ namespace conseat
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // Validation
             if (string.IsNullOrWhiteSpace(txtEventName.Text) ||
                 string.IsNullOrWhiteSpace(txtArtistName.Text) ||
                 cmbVenue.SelectedIndex == -1 ||
                 string.IsNullOrWhiteSpace(txtPriceVIP.Text) ||
                 string.IsNullOrWhiteSpace(txtPriceGenAd.Text) ||
-                string.IsNullOrWhiteSpace(txtPriceUpperBox.Text) ||
-                string.IsNullOrEmpty(imagePath))
+                string.IsNullOrWhiteSpace(txtPriceUpperBox.Text))
             {
-                MessageBox.Show("Please fill out all fields and upload an image.", "Missing Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill out all fields.", "Missing Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -102,13 +166,41 @@ namespace conseat
                 DBConnection db = new DBConnection();
                 db.OpenConnection();
 
-                
-                byte[] imageBytes = File.ReadAllBytes(imagePath);
+                byte[] imageBytes = null;
 
-                string query = @"INSERT INTO concert_events 
-                         (event_name, artist_name, venue, event_date, event_time, price_vip, price_gen_ad, price_upper_box, image)
-                         VALUES 
-                         (@event, @artist, @venue, @date, @time, @vip, @genad, @upperbox, @image)";
+                if (!string.IsNullOrEmpty(imagePath))
+                {
+                    imageBytes = File.ReadAllBytes(imagePath); // New image from file
+                }
+                else if (pbArtistImage.Image != null)
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        pbArtistImage.Image.Save(ms, pbArtistImage.Image.RawFormat);
+                        imageBytes = ms.ToArray(); // Use existing image
+                    }
+                }
+
+                string query;
+
+                if (isEditMode)
+                {
+                    query = @"UPDATE concert_events 
+                              SET event_name = @event, artist_name = @artist, venue = @venue,
+                                  event_date = @date, event_time = @time,
+                                  price_vip = @vip, price_gen_ad = @genad, price_upper_box = @upperbox,
+                                  image = @image
+                              WHERE id = @id";
+                }
+                else
+                {
+                    query = @"INSERT INTO concert_events 
+                              (event_name, artist_name, venue, event_date, event_time, 
+                               price_vip, price_gen_ad, price_upper_box, image)
+                              VALUES
+                              (@event, @artist, @venue, @date, @time,
+                               @vip, @genad, @upperbox, @image)";
+                }
 
                 using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
                 {
@@ -120,15 +212,25 @@ namespace conseat
                     cmd.Parameters.AddWithValue("@vip", Convert.ToDecimal(txtPriceVIP.Text));
                     cmd.Parameters.AddWithValue("@genad", Convert.ToDecimal(txtPriceGenAd.Text));
                     cmd.Parameters.AddWithValue("@upperbox", Convert.ToDecimal(txtPriceUpperBox.Text));
-                    cmd.Parameters.AddWithValue("@image", imageBytes); // ✅ Add image as byte[]
+                    cmd.Parameters.AddWithValue("@image", imageBytes);
+
+                    if (isEditMode)
+                    {
+                        cmd.Parameters.AddWithValue("@id", concertID);
+                    }
 
                     cmd.ExecuteNonQuery();
                 }
 
                 db.CloseConnection();
 
-                MessageBox.Show("Concert event saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearFields();
+                MessageBox.Show(isEditMode ? "Concert updated successfully!" : "Concert created successfully!",
+                                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if (!isEditMode)
+                {
+                    ClearFields();
+                }
             }
             catch (Exception ex)
             {

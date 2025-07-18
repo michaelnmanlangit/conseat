@@ -35,7 +35,6 @@
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnCreateEvent = new System.Windows.Forms.Button();
             this.btnManageSales = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
             this.pnlMainContent = new System.Windows.Forms.Panel();
             this.flpConcerts = new System.Windows.Forms.FlowLayoutPanel();
             this.cboSort = new System.Windows.Forms.ComboBox();
@@ -87,7 +86,6 @@
             this.pnlNav.BackColor = System.Drawing.Color.Transparent;
             this.pnlNav.Controls.Add(this.btnCreateEvent);
             this.pnlNav.Controls.Add(this.btnManageSales);
-            this.pnlNav.Controls.Add(this.btnReports);
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlNav.Location = new System.Drawing.Point(0, 54);
             this.pnlNav.Name = "pnlNav";
@@ -97,7 +95,7 @@
             // 
             // btnCreateEvent
             // 
-            this.btnCreateEvent.Location = new System.Drawing.Point(10, 5);
+            this.btnCreateEvent.Location = new System.Drawing.Point(156, 4);
             this.btnCreateEvent.Name = "btnCreateEvent";
             this.btnCreateEvent.Size = new System.Drawing.Size(81, 23);
             this.btnCreateEvent.TabIndex = 3;
@@ -107,23 +105,13 @@
             // 
             // btnManageSales
             // 
-            this.btnManageSales.Location = new System.Drawing.Point(97, 5);
+            this.btnManageSales.Location = new System.Drawing.Point(243, 4);
             this.btnManageSales.Name = "btnManageSales";
             this.btnManageSales.Size = new System.Drawing.Size(88, 23);
             this.btnManageSales.TabIndex = 2;
             this.btnManageSales.Text = "Manage Sales";
             this.btnManageSales.UseVisualStyleBackColor = true;
             this.btnManageSales.Click += new System.EventHandler(this.btnManageSales_Click);
-            // 
-            // btnReports
-            // 
-            this.btnReports.Location = new System.Drawing.Point(191, 5);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(80, 23);
-            this.btnReports.TabIndex = 1;
-            this.btnReports.Text = "View Report";
-            this.btnReports.UseVisualStyleBackColor = true;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // pnlMainContent
             // 
@@ -177,9 +165,9 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Location = new System.Drawing.Point(12, 20);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(94, 13);
+            this.lblTitle.Size = new System.Drawing.Size(80, 13);
             this.lblTitle.TabIndex = 6;
-            this.lblTitle.Text = "All Concert Events";
+            this.lblTitle.Text = "Concert Events";
             // 
             // frmAdminDashboard
             // 
@@ -208,7 +196,6 @@
         #endregion
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Panel pnlNav;
-        private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnCreateEvent;
         private System.Windows.Forms.Button btnManageSales;

@@ -66,7 +66,9 @@ namespace conseat
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-
+            
+          
+            OnDeleteClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }
