@@ -18,6 +18,10 @@ namespace conseat
             _currentUser = user;
         }
 
+        public frmCustomHome()
+        {
+        }
+
 
         // Set default sort options
         private void SetupSortOptions()
@@ -45,7 +49,6 @@ namespace conseat
             RefreshConcerts();
         }
 
-        // Load concerts from database with optional filters
         private void LoadConcerts(string keyword = "", string sort = "")
         {
             flpConcerts.Controls.Clear(); // Clear current concert cards
@@ -55,7 +58,7 @@ namespace conseat
 
             // Build SQL query with filters
             List<string> filters = new List<string>();
-            string baseQuery = "SELECT id, artist_name, image FROM concert_events";
+            string baseQuery = "SELECT id, artist_name, image, event_date, event_time, venue FROM concert_events";
 
             if (!string.IsNullOrEmpty(keyword))
                 filters.Add("artist_name LIKE @keyword");
@@ -81,7 +84,6 @@ namespace conseat
                     break;
             }
 
-            // Fetch data from database
             try
             {
                 db.OpenConnection();
@@ -95,11 +97,13 @@ namespace conseat
                     {
                         while (reader.Read())
                         {
-                            // Extract concert info
                             string id = reader["id"].ToString();
                             string artistName = reader["artist_name"].ToString();
-                            Image image = Properties.Resources.back_svgrepo_com1;
+                            string eventDate = reader["event_date"].ToString();
+                            string eventTime = reader["event_time"].ToString();
+                            string venueName = reader["venue"].ToString();
 
+                            Image image = Properties.Resources.back_svgrepo_com1;
                             if (!reader.IsDBNull(reader.GetOrdinal("image")))
                             {
                                 byte[] imgBytes = (byte[])reader["image"];
@@ -109,15 +113,17 @@ namespace conseat
                                 }
                             }
 
-                            // Create and configure card
                             var card = new ucCustomerConcertCard();
-                            card.SetData(id, artistName, image);
+                            // Pass all the updated data
+                            card.SetData(id, artistName, eventDate, eventTime, venueName, image);
 
-                            // Handle Buy button click
+                            // Handle Buy Ticket button click
                             card.OnBuyClicked += (s, e) =>
                             {
-                                MessageBox.Show($"You clicked Buy for {artistName}");
-                                // You can redirect to ticket details page here
+                                frmConcertDetails detailForm = new frmConcertDetails(
+                                    id, artistName, eventDate, eventTime, venueName, image
+                                );
+                                detailForm.ShowDialog();
                             };
 
                             flpConcerts.Controls.Add(card);
