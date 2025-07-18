@@ -158,12 +158,6 @@
     <Compile Include="ucManageSales.Designer.cs">
       <DependentUpon>ucManageSales.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucReports.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucReports.Designer.cs">
-      <DependentUpon>ucReports.cs</DependentUpon>
-    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="ucCreateEvent.cs">
       <SubType>UserControl</SubType>

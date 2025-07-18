@@ -33,9 +33,10 @@ namespace conseat
             InitializeComponent();
             concertID = id;
             isEditMode = true;
+            lblTitle.Text = "Edit Concert Event";
             LoadConcertData();
 
-            lblTitle.Text = "  Edit Concert Event";
+            
         }
 
 
