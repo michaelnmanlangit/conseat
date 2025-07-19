@@ -60,13 +60,31 @@ namespace conseat
                         {
                             txtEventName.Text = reader["event_name"].ToString();
                             txtArtistName.Text = reader["artist_name"].ToString();
-                            cmbVenue.SelectedItem = reader["venue"].ToString();
+
+                            // 🔁 Populate venue list
+                            cmbVenue.Items.Clear();
+                            cmbVenue.Items.AddRange(new string[]
+                            {
+                        "Smart Araneta Coliseum",
+                        "Philippine Arena",
+                        "Mall of Asia Arena"
+                            });
+
+                            // ✅ Set selected venue from DB
+                            string venueFromDb = reader["venue"].ToString().Trim();
+                            int index = cmbVenue.FindStringExact(venueFromDb);
+                            if (index != -1)
+                            {
+                                cmbVenue.SelectedIndex = index;
+                            }
+
                             dtpDate.Value = Convert.ToDateTime(reader["event_date"]);
                             dtpTime.Value = DateTime.Today.Add((TimeSpan)reader["event_time"]);
                             txtPriceVIP.Text = reader["price_vip"].ToString();
                             txtPriceGenAd.Text = reader["price_gen_ad"].ToString();
                             txtPriceUpperBox.Text = reader["price_upper_box"].ToString();
 
+                            // 🖼 Load artist image if available
                             if (!reader.IsDBNull(reader.GetOrdinal("image")))
                             {
                                 byte[] imgBytes = (byte[])reader["image"];
@@ -89,6 +107,7 @@ namespace conseat
                 db.CloseConnection();
             }
         }
+
 
 
         private void ClearFields()

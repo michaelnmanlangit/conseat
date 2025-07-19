@@ -51,6 +51,7 @@
             this.btnSelectSeat.TabIndex = 15;
             this.btnSelectSeat.Text = "SELECT YOUR DESIRED SEAT";
             this.btnSelectSeat.UseVisualStyleBackColor = true;
+            this.btnSelectSeat.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // picImage
             // 
@@ -74,6 +75,7 @@
             this.lblVenue.TabIndex = 12;
             this.lblVenue.Text = "MOA ARENA";
             this.lblVenue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblVenue.Click += new System.EventHandler(this.lblVenue_Click);
             // 
             // lblTime
             // 

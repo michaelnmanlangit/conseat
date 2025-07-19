@@ -67,13 +67,15 @@ namespace conseat
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(98, 6);
+            this.lblTitle.Location = new System.Drawing.Point(0, 6);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(134, 13);
+            this.lblTitle.Size = new System.Drawing.Size(334, 13);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Create New Concert Event";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 

@@ -42,5 +42,16 @@ namespace conseat
                 this.Close();
             }
         }
+
+        private void btnSelectSeat_Click(object sender, EventArgs e)
+        {
+            frmSelectSeat selectSeatForm = new frmSelectSeat();
+            selectSeatForm.ShowDialog(); // or Show()
+        }
+
+        private void lblVenue_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

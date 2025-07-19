@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace conseat
 {
-    public partial class Form9 : Form
+    public partial class frmSelectGenAd : Form
     {
-        public Form9()
+        public frmSelectGenAd()
         {
             InitializeComponent();
         }

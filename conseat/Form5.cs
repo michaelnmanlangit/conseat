@@ -31,5 +31,34 @@ namespace conseat
                 this.Close();
             }
         }
+
+        private void picUpperBox1_Click(object sender, EventArgs e)
+        {
+            frmSelectUpper upperForm = new frmSelectUpper();
+            upperForm.ShowDialog();
+        }
+
+        private void picUpperBox_Click(object sender, EventArgs e)
+        {
+            frmSelectUpper upperForm = new frmSelectUpper();
+            upperForm.ShowDialog();
+        }
+
+        private void pivVip_Click(object sender, EventArgs e)
+        {
+            frmSelectVip vipForm = new frmSelectVip();
+            vipForm.ShowDialog();
+        }
+
+        private void picGenAd_Click(object sender, EventArgs e)
+        {
+            frmSelectGenAd genAdForm = new frmSelectGenAd();
+            genAdForm.ShowDialog();
+        }
+
+        private void frmSelectSeat_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
