@@ -71,12 +71,6 @@
     <Compile Include="Form11.Designer.cs">
       <DependentUpon>Form11.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form12.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form12.Designer.cs">
-      <DependentUpon>Form12.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form13.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +133,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SessionManager.cs" />
     <Compile Include="ucConcertCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form11.resx">
       <DependentUpon>Form11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form12.resx">
-      <DependentUpon>Form12.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form13.resx">
       <DependentUpon>Form13.cs</DependentUpon>
@@ -217,6 +209,9 @@
     <EmbeddedResource Include="ucCustomerConcertCard.resx">
       <DependentUpon>ucCustomerConcertCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucManageSales.resx">
+      <DependentUpon>ucManageSales.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -253,6 +248,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sign-out-svgrepo-com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database_payments_setup.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

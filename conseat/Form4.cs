@@ -12,15 +12,24 @@ namespace conseat
 {
     public partial class frmConcertDetails : Form
     {
+        private string concertId;
+        
         public frmConcertDetails(string id, string artistName, string eventDate, string eventTime, string venueName, Image artistImage)
         {
             InitializeComponent();
 
+            concertId = id;
             lblArtistName.Text = artistName;
             lblDate.Text = eventDate;
             lblTime.Text = eventTime;
             lblVenue.Text = venueName;
             picImage.Image = artistImage;
+            
+            // Set concert context in session
+            if (DateTime.TryParse(eventDate, out DateTime parsedDate))
+            {
+                SessionManager.SetConcertContext(id, artistName, parsedDate, eventTime, venueName);
+            }
         }
 
         private void Form4_Load(object sender, EventArgs e)

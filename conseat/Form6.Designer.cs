@@ -80,6 +80,7 @@
             this.lblSelected.Name = "lblSelected";
             this.lblSelected.Size = new System.Drawing.Size(126, 20);
             this.lblSelected.TabIndex = 32;
+            this.lblSelected.Click += new System.EventHandler(this.lblSelected_Click);
             // 
             // picC5
             // 
@@ -93,6 +94,7 @@
             this.picC5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picC5.TabIndex = 31;
             this.picC5.TabStop = false;
+            this.picC5.Click += new System.EventHandler(this.picC5_Click);
             // 
             // picC4
             // 
@@ -106,6 +108,7 @@
             this.picC4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picC4.TabIndex = 30;
             this.picC4.TabStop = false;
+            this.picC4.Click += new System.EventHandler(this.picC4_Click);
             // 
             // picC3
             // 
@@ -119,6 +122,7 @@
             this.picC3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picC3.TabIndex = 29;
             this.picC3.TabStop = false;
+            this.picC3.Click += new System.EventHandler(this.picC3_Click);
             // 
             // picC2
             // 
@@ -132,6 +136,7 @@
             this.picC2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picC2.TabIndex = 28;
             this.picC2.TabStop = false;
+            this.picC2.Click += new System.EventHandler(this.picC2_Click);
             // 
             // picC1
             // 
@@ -145,6 +150,7 @@
             this.picC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picC1.TabIndex = 27;
             this.picC1.TabStop = false;
+            this.picC1.Click += new System.EventHandler(this.picC1_Click);
             // 
             // picB5
             // 
@@ -172,6 +178,7 @@
             this.picB4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picB4.TabIndex = 25;
             this.picB4.TabStop = false;
+            this.picB4.Click += new System.EventHandler(this.picB4_Click);
             // 
             // picB3
             // 
@@ -185,6 +192,7 @@
             this.picB3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picB3.TabIndex = 24;
             this.picB3.TabStop = false;
+            this.picB3.Click += new System.EventHandler(this.picB3_Click);
             // 
             // picB2
             // 
@@ -198,6 +206,7 @@
             this.picB2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picB2.TabIndex = 23;
             this.picB2.TabStop = false;
+            this.picB2.Click += new System.EventHandler(this.picB2_Click);
             // 
             // picB1
             // 
@@ -211,6 +220,7 @@
             this.picB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picB1.TabIndex = 22;
             this.picB1.TabStop = false;
+            this.picB1.Click += new System.EventHandler(this.picB1_Click);
             // 
             // picA5
             // 
@@ -224,6 +234,7 @@
             this.picA5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picA5.TabIndex = 21;
             this.picA5.TabStop = false;
+            this.picA5.Click += new System.EventHandler(this.picA5_Click);
             // 
             // picA4
             // 
@@ -237,6 +248,7 @@
             this.picA4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picA4.TabIndex = 20;
             this.picA4.TabStop = false;
+            this.picA4.Click += new System.EventHandler(this.picA4_Click);
             // 
             // picA3
             // 
@@ -250,6 +262,7 @@
             this.picA3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picA3.TabIndex = 19;
             this.picA3.TabStop = false;
+            this.picA3.Click += new System.EventHandler(this.picA3_Click);
             // 
             // picA2
             // 
@@ -263,6 +276,7 @@
             this.picA2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picA2.TabIndex = 18;
             this.picA2.TabStop = false;
+            this.picA2.Click += new System.EventHandler(this.picA2_Click);
             // 
             // picA1
             // 
@@ -276,6 +290,7 @@
             this.picA1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picA1.TabIndex = 17;
             this.picA1.TabStop = false;
+            this.picA1.Click += new System.EventHandler(this.picA1_Click);
             // 
             // pictureBox16
             // 
@@ -310,6 +325,7 @@
             this.panelSeats.Name = "panelSeats";
             this.panelSeats.Size = new System.Drawing.Size(247, 174);
             this.panelSeats.TabIndex = 34;
+            this.panelSeats.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSeats_Paint);
             // 
             // label1
             // 
@@ -325,6 +341,7 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "VIP PREMIUM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnReserve
             // 

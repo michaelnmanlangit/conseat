@@ -63,6 +63,9 @@ namespace conseat
                     user.Email = userEmail;
                     user.Role = role;
 
+                    // Set current user in session manager
+                    SessionManager.CurrentUser = user;
+
                     MessageBox.Show(user.GetWelcomeMessage());
 
                     this.Hide();
