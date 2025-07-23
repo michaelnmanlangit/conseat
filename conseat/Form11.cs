@@ -385,8 +385,48 @@ namespace conseat
 
             MessageBox.Show(successMessage, "Payment Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Navigate back to customer home or close the form
-            NavigateToHome();
+            // Navigate to Thank You form (Form12) after successful payment
+            NavigateToThanksForm();
+        }
+
+        private void NavigateToThanksForm()
+        {
+            try
+            {
+                // Create the thank you form
+                frmThanks thanksForm = new frmThanks();
+                
+                // Set transaction details on the thank you form
+                string transactionId = $"TXN{DateTime.Now.ToString("yyyyMMddHHmmss")}{SessionManager.CurrentUser.Id}";
+                thanksForm.SetTransactionDetails(
+                    transactionId,
+                    SessionManager.CurrentConcertName ?? "Concert Event",
+                    1, // ticket count
+                    price
+                );
+
+                // Close all payment-related forms
+                Form[] formsToClose = Application.OpenForms.Cast<Form>()
+                    .Where(f => f.Name.Contains("Payment") || f.Name.Contains("Select") || f == this)
+                    .ToArray();
+
+                // Show the thanks form
+                thanksForm.Show();
+
+                // Close payment forms after showing thanks form
+                foreach (Form form in formsToClose)
+                {
+                    form.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Payment completed successfully, but there was an error navigating to the confirmation page: {ex.Message}", 
+                              "Navigation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+                // Fallback: navigate to home
+                NavigateToHome();
+            }
         }
 
         private void NavigateToHome()

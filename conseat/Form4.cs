@@ -25,10 +25,10 @@ namespace conseat
             lblVenue.Text = venueName;
             picImage.Image = artistImage;
             
-            // Set concert context in session
+            // Set concert context in session with image
             if (DateTime.TryParse(eventDate, out DateTime parsedDate))
             {
-                SessionManager.SetConcertContext(id, artistName, parsedDate, eventTime, venueName);
+                SessionManager.SetConcertContext(id, artistName, parsedDate, eventTime, venueName, artistImage);
             }
         }
 
