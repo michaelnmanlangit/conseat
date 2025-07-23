@@ -54,8 +54,9 @@
             this.pnlHeader.Controls.Add(this.picLogo);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(334, 54);
+            this.pnlHeader.Size = new System.Drawing.Size(445, 66);
             this.pnlHeader.TabIndex = 1;
             this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -63,9 +64,10 @@
             // 
             this.picLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLogout.Image = global::conseat.Properties.Resources.sign_out_svgrepo_com__1_;
-            this.picLogout.Location = new System.Drawing.Point(291, 7);
+            this.picLogout.Location = new System.Drawing.Point(388, 9);
+            this.picLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picLogout.Name = "picLogout";
-            this.picLogout.Size = new System.Drawing.Size(40, 40);
+            this.picLogout.Size = new System.Drawing.Size(53, 49);
             this.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogout.TabIndex = 0;
             this.picLogout.TabStop = false;
@@ -76,9 +78,10 @@
             this.picLogo.BackgroundImage = global::conseat.Properties.Resources._517238827_717085247981486_3205119874936882807_n;
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picLogo.Location = new System.Drawing.Point(0, 3);
+            this.picLogo.Location = new System.Drawing.Point(0, 4);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(62, 50);
+            this.picLogo.Size = new System.Drawing.Size(83, 62);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 2;
             this.picLogo.TabStop = false;
@@ -90,18 +93,20 @@
             this.pnlNav.Controls.Add(this.btnCreateEvent);
             this.pnlNav.Controls.Add(this.btnManageSales);
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlNav.Location = new System.Drawing.Point(0, 54);
+            this.pnlNav.Location = new System.Drawing.Point(0, 66);
+            this.pnlNav.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(334, 33);
+            this.pnlNav.Size = new System.Drawing.Size(445, 41);
             this.pnlNav.TabIndex = 2;
             this.pnlNav.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlNav_Paint);
             // 
             // btnCreateEvent
             // 
             this.btnCreateEvent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCreateEvent.Location = new System.Drawing.Point(156, 4);
+            this.btnCreateEvent.Location = new System.Drawing.Point(208, 5);
+            this.btnCreateEvent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreateEvent.Name = "btnCreateEvent";
-            this.btnCreateEvent.Size = new System.Drawing.Size(81, 23);
+            this.btnCreateEvent.Size = new System.Drawing.Size(108, 28);
             this.btnCreateEvent.TabIndex = 3;
             this.btnCreateEvent.Text = "Create Event";
             this.btnCreateEvent.UseVisualStyleBackColor = true;
@@ -110,9 +115,10 @@
             // btnManageSales
             // 
             this.btnManageSales.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnManageSales.Location = new System.Drawing.Point(243, 4);
+            this.btnManageSales.Location = new System.Drawing.Point(324, 5);
+            this.btnManageSales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnManageSales.Name = "btnManageSales";
-            this.btnManageSales.Size = new System.Drawing.Size(88, 23);
+            this.btnManageSales.Size = new System.Drawing.Size(117, 28);
             this.btnManageSales.TabIndex = 2;
             this.btnManageSales.Text = "Manage Sales";
             this.btnManageSales.UseVisualStyleBackColor = true;
@@ -122,18 +128,20 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(12, 5);
+            this.lblTitle.Location = new System.Drawing.Point(16, 6);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(80, 13);
+            this.lblTitle.Size = new System.Drawing.Size(97, 16);
             this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "Concert Events";
             // 
             // txtSearch
             // 
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtSearch.Location = new System.Drawing.Point(172, 3);
+            this.txtSearch.Location = new System.Drawing.Point(229, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(103, 20);
+            this.txtSearch.Size = new System.Drawing.Size(136, 22);
             this.txtSearch.TabIndex = 7;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -141,9 +149,10 @@
             // 
             this.cmbSort.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbSort.FormattingEnabled = true;
-            this.cmbSort.Location = new System.Drawing.Point(291, 3);
+            this.cmbSort.Location = new System.Drawing.Point(388, 4);
+            this.cmbSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbSort.Name = "cmbSort";
-            this.cmbSort.Size = new System.Drawing.Size(40, 21);
+            this.cmbSort.Size = new System.Drawing.Size(52, 24);
             this.cmbSort.TabIndex = 9;
             this.cmbSort.SelectedIndexChanged += new System.EventHandler(this.cmbSort_SelectedIndexChanged);
             // 
@@ -151,9 +160,10 @@
             // 
             this.flpConcerts.AutoScroll = true;
             this.flpConcerts.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flpConcerts.Location = new System.Drawing.Point(0, 36);
+            this.flpConcerts.Location = new System.Drawing.Point(0, 44);
+            this.flpConcerts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flpConcerts.Name = "flpConcerts";
-            this.flpConcerts.Size = new System.Drawing.Size(334, 398);
+            this.flpConcerts.Size = new System.Drawing.Size(445, 490);
             this.flpConcerts.TabIndex = 10;
             // 
             // pnlMainContent
@@ -164,23 +174,25 @@
             this.pnlMainContent.Controls.Add(this.txtSearch);
             this.pnlMainContent.Controls.Add(this.lblTitle);
             this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainContent.Location = new System.Drawing.Point(0, 87);
+            this.pnlMainContent.Location = new System.Drawing.Point(0, 107);
+            this.pnlMainContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlMainContent.Name = "pnlMainContent";
-            this.pnlMainContent.Size = new System.Drawing.Size(334, 434);
+            this.pnlMainContent.Size = new System.Drawing.Size(445, 534);
             this.pnlMainContent.TabIndex = 3;
             this.pnlMainContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainContent_Paint);
             // 
             // frmAdminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(334, 521);
+            this.ClientSize = new System.Drawing.Size(445, 641);
             this.Controls.Add(this.pnlMainContent);
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form13";

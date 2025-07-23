@@ -43,10 +43,10 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(17, 6);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Location = new System.Drawing.Point(23, 7);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(56, 19);
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "BACK";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -54,11 +54,14 @@
             // 
             // btnProceedPayment
             // 
-            this.btnProceedPayment.BackColor = System.Drawing.SystemColors.Control;
+            this.btnProceedPayment.BackColor = System.Drawing.Color.LimeGreen;
             this.btnProceedPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProceedPayment.Location = new System.Drawing.Point(65, 478);
+            this.btnProceedPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProceedPayment.ForeColor = System.Drawing.Color.Black;
+            this.btnProceedPayment.Location = new System.Drawing.Point(87, 588);
+            this.btnProceedPayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProceedPayment.Name = "btnProceedPayment";
-            this.btnProceedPayment.Size = new System.Drawing.Size(195, 37);
+            this.btnProceedPayment.Size = new System.Drawing.Size(260, 46);
             this.btnProceedPayment.TabIndex = 17;
             this.btnProceedPayment.Text = "PROCEED TO PAYMENT";
             this.btnProceedPayment.UseVisualStyleBackColor = false;
@@ -66,11 +69,12 @@
             // 
             // lblPrice
             // 
+            this.lblPrice.BackColor = System.Drawing.Color.Transparent;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(0, 440);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrice.ForeColor = System.Drawing.Color.White;
+            this.lblPrice.Location = new System.Drawing.Point(0, 542);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(333, 17);
+            this.lblPrice.Size = new System.Drawing.Size(444, 21);
             this.lblPrice.TabIndex = 16;
             this.lblPrice.Text = "Price";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,11 +82,12 @@
             // 
             // lblBlockSeatNo
             // 
+            this.lblBlockSeatNo.BackColor = System.Drawing.Color.Transparent;
             this.lblBlockSeatNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBlockSeatNo.Location = new System.Drawing.Point(0, 414);
-            this.lblBlockSeatNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBlockSeatNo.ForeColor = System.Drawing.Color.White;
+            this.lblBlockSeatNo.Location = new System.Drawing.Point(0, 510);
             this.lblBlockSeatNo.Name = "lblBlockSeatNo";
-            this.lblBlockSeatNo.Size = new System.Drawing.Size(333, 17);
+            this.lblBlockSeatNo.Size = new System.Drawing.Size(444, 21);
             this.lblBlockSeatNo.TabIndex = 15;
             this.lblBlockSeatNo.Text = "Block and Seat No.";
             this.lblBlockSeatNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,11 +95,12 @@
             // 
             // lblVenue
             // 
+            this.lblVenue.BackColor = System.Drawing.Color.Transparent;
             this.lblVenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVenue.Location = new System.Drawing.Point(0, 391);
-            this.lblVenue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVenue.ForeColor = System.Drawing.Color.White;
+            this.lblVenue.Location = new System.Drawing.Point(0, 481);
             this.lblVenue.Name = "lblVenue";
-            this.lblVenue.Size = new System.Drawing.Size(333, 17);
+            this.lblVenue.Size = new System.Drawing.Size(444, 21);
             this.lblVenue.TabIndex = 14;
             this.lblVenue.Text = "Venue";
             this.lblVenue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -102,11 +108,12 @@
             // 
             // lblDateTime
             // 
+            this.lblDateTime.BackColor = System.Drawing.Color.Transparent;
             this.lblDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTime.Location = new System.Drawing.Point(3, 367);
-            this.lblDateTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDateTime.ForeColor = System.Drawing.Color.White;
+            this.lblDateTime.Location = new System.Drawing.Point(4, 452);
             this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(330, 17);
+            this.lblDateTime.Size = new System.Drawing.Size(440, 21);
             this.lblDateTime.TabIndex = 13;
             this.lblDateTime.Text = "Date and Time";
             this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,11 +121,12 @@
             // 
             // lblArtistName
             // 
+            this.lblArtistName.BackColor = System.Drawing.Color.Transparent;
             this.lblArtistName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArtistName.Location = new System.Drawing.Point(-3, 344);
-            this.lblArtistName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblArtistName.ForeColor = System.Drawing.Color.White;
+            this.lblArtistName.Location = new System.Drawing.Point(-4, 423);
             this.lblArtistName.Name = "lblArtistName";
-            this.lblArtistName.Size = new System.Drawing.Size(336, 17);
+            this.lblArtistName.Size = new System.Drawing.Size(448, 21);
             this.lblArtistName.TabIndex = 12;
             this.lblArtistName.Text = "Artist Name";
             this.lblArtistName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -127,10 +135,10 @@
             // picImage
             // 
             this.picImage.Image = ((System.Drawing.Image)(resources.GetObject("picImage.Image")));
-            this.picImage.Location = new System.Drawing.Point(65, 120);
-            this.picImage.Margin = new System.Windows.Forms.Padding(2);
+            this.picImage.Location = new System.Drawing.Point(87, 148);
+            this.picImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(195, 209);
+            this.picImage.Size = new System.Drawing.Size(260, 257);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImage.TabIndex = 11;
             this.picImage.TabStop = false;
@@ -139,21 +147,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(121, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 26);
+            this.label1.Size = new System.Drawing.Size(187, 32);
             this.label1.TabIndex = 10;
             this.label1.Text = "CHECK OUT";
             // 
             // frmCheckOut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(334, 521);
+            this.ClientSize = new System.Drawing.Size(445, 641);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnProceedPayment);
             this.Controls.Add(this.lblPrice);
@@ -164,6 +172,7 @@
             this.Controls.Add(this.picImage);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmCheckOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form7";
