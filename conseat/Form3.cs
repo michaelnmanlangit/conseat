@@ -184,5 +184,10 @@ namespace conseat
             SetupSortOptions();
             LoadConcertDashboard();
         }
+
+        private void flpConcerts_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

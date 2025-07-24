@@ -33,8 +33,8 @@
             this.picLogout = new System.Windows.Forms.PictureBox();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlSearchSort = new System.Windows.Forms.Panel();
-            this.cmbSort = new System.Windows.Forms.ComboBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.cmbSort = new System.Windows.Forms.ComboBox();
             this.pnlMainContent = new System.Windows.Forms.Panel();
             this.flpConcerts = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlHeader.SuspendLayout();
@@ -51,17 +51,19 @@
             this.pnlHeader.Controls.Add(this.picLogo);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(334, 54);
+            this.pnlHeader.Size = new System.Drawing.Size(445, 66);
             this.pnlHeader.TabIndex = 2;
             // 
             // picLogout
             // 
             this.picLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLogout.Image = global::conseat.Properties.Resources.sign_out_svgrepo_com__1_;
-            this.picLogout.Location = new System.Drawing.Point(291, 7);
+            this.picLogout.Location = new System.Drawing.Point(388, 9);
+            this.picLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picLogout.Name = "picLogout";
-            this.picLogout.Size = new System.Drawing.Size(40, 40);
+            this.picLogout.Size = new System.Drawing.Size(53, 49);
             this.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogout.TabIndex = 0;
             this.picLogout.TabStop = false;
@@ -72,9 +74,10 @@
             this.picLogo.BackgroundImage = global::conseat.Properties.Resources._517238827_717085247981486_3205119874936882807_n;
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picLogo.Location = new System.Drawing.Point(0, 3);
+            this.picLogo.Location = new System.Drawing.Point(0, 4);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(62, 50);
+            this.picLogo.Size = new System.Drawing.Size(83, 62);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 2;
             this.picLogo.TabStop = false;
@@ -86,38 +89,42 @@
             this.pnlSearchSort.Controls.Add(this.txtSearch);
             this.pnlSearchSort.Controls.Add(this.cmbSort);
             this.pnlSearchSort.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSearchSort.Location = new System.Drawing.Point(0, 54);
+            this.pnlSearchSort.Location = new System.Drawing.Point(0, 66);
+            this.pnlSearchSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlSearchSort.Name = "pnlSearchSort";
-            this.pnlSearchSort.Size = new System.Drawing.Size(334, 43);
+            this.pnlSearchSort.Size = new System.Drawing.Size(445, 53);
             this.pnlSearchSort.TabIndex = 3;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSearch.Location = new System.Drawing.Point(231, 9);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(136, 22);
+            this.txtSearch.TabIndex = 10;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // cmbSort
             // 
             this.cmbSort.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbSort.FormattingEnabled = true;
-            this.cmbSort.Location = new System.Drawing.Point(282, 6);
+            this.cmbSort.Location = new System.Drawing.Point(376, 7);
+            this.cmbSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbSort.Name = "cmbSort";
-            this.cmbSort.Size = new System.Drawing.Size(40, 21);
+            this.cmbSort.Size = new System.Drawing.Size(52, 24);
             this.cmbSort.TabIndex = 11;
             this.cmbSort.SelectedIndexChanged += new System.EventHandler(this.cmbSort_SelectedIndexChanged);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtSearch.Location = new System.Drawing.Point(173, 7);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(103, 20);
-            this.txtSearch.TabIndex = 10;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // pnlMainContent
             // 
             this.pnlMainContent.BackColor = System.Drawing.Color.Transparent;
             this.pnlMainContent.Controls.Add(this.flpConcerts);
             this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainContent.Location = new System.Drawing.Point(0, 97);
+            this.pnlMainContent.Location = new System.Drawing.Point(0, 119);
+            this.pnlMainContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlMainContent.Name = "pnlMainContent";
-            this.pnlMainContent.Size = new System.Drawing.Size(334, 424);
+            this.pnlMainContent.Size = new System.Drawing.Size(445, 522);
             this.pnlMainContent.TabIndex = 4;
             // 
             // flpConcerts
@@ -126,21 +133,24 @@
             this.flpConcerts.BackColor = System.Drawing.Color.Transparent;
             this.flpConcerts.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpConcerts.Location = new System.Drawing.Point(0, 0);
+            this.flpConcerts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flpConcerts.Name = "flpConcerts";
-            this.flpConcerts.Size = new System.Drawing.Size(334, 424);
+            this.flpConcerts.Size = new System.Drawing.Size(445, 522);
             this.flpConcerts.TabIndex = 0;
+            this.flpConcerts.Paint += new System.Windows.Forms.PaintEventHandler(this.flpConcerts_Paint);
             // 
             // frmCustomHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(334, 521);
+            this.ClientSize = new System.Drawing.Size(445, 641);
             this.Controls.Add(this.pnlMainContent);
             this.Controls.Add(this.pnlSearchSort);
             this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmCustomHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
