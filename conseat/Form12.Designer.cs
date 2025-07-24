@@ -16,6 +16,19 @@
             if (disposing && (components != null))
             {
                 components.Dispose();
+                
+                // Call our custom disposal logic
+                try
+                {
+                    if (this is frmThanks thanksForm)
+                    {
+                        thanksForm.DisposeResources();
+                    }
+                }
+                catch
+                {
+                    // Ignore disposal errors
+                }
             }
             base.Dispose(disposing);
         }

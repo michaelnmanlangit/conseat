@@ -59,23 +59,6 @@ namespace conseat
         private void frmSelectVip_Load(object sender, EventArgs e)
         {
             LoadSeats();
-            // Initialize label
-            if (lblSelected != null)
-            {
-                lblSelected.Text = "Selected: None";
-            }
-
-            // Check DB connection once on load
-            try
-            {
-                db.OpenConnection();
-                MessageBox.Show("Database connected successfully!");
-                db.CloseConnection();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Database connection failed: " + ex.Message);
-            }
         }
 
         private void LoadSeats()
@@ -189,15 +172,8 @@ namespace conseat
             selectedSeats.Add(seatId);
             clickedSeat.BackColor = Color.LightGreen;
 
-            // Update label - make sure lblSelected exists
-            if (lblSelected != null)
-            {
-                lblSelected.Text = "Selected: VIP-" + seatId;
-            }
-            else
-            {
-                MessageBox.Show("lblSelected control not found!");
-            }
+            
+           
         }
 
         private void btnReserve_Click(object sender, EventArgs e)
@@ -315,7 +291,7 @@ namespace conseat
             }
 
             selectedSeats.Clear();
-            lblSelected.Text = "Selected:";
+            
         }
 
         private void pictureBox16_Click(object sender, EventArgs e)

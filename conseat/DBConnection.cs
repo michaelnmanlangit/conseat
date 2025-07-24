@@ -1,47 +1,177 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace conseat
 {
-    internal class DBConnection
+    // ABSTRACTION: Interface defining database operations contract
+    public interface IDbConnection : IDisposable
     {
-        private MySqlConnection connection;
+        MySqlConnection GetConnection();
+        void OpenConnection();
+        void CloseConnection();
+        bool TestConnection();
+    }
 
-        // Constructor that sets up the connection string
+    // ENCAPSULATION: Internal implementation details hidden
+    // INHERITANCE: Implements IDbConnection interface
+    internal class DBConnection : IDbConnection
+    {
+        // ENCAPSULATION: Private fields protecting connection details
+        private MySqlConnection _connection;
+        private readonly string _connectionString;
+        private bool _disposed = false;
+
+        // ENCAPSULATION: Constructor encapsulates connection setup
         public DBConnection()
         {
-            // XAMPP default: server = localhost, user = root, no password
-            string connectionString = "server=localhost;user id=root;password=;database=concertdb;AllowLoadLocalInfile=true;default command timeout=600;Max Pool Size=100;";
-
-            connection = new MySqlConnection(connectionString);
+            // ABSTRACTION: Complex connection string creation abstracted away
+            _connectionString = BuildConnectionString();
+            _connection = new MySqlConnection(_connectionString);
         }
 
-        // Method to get the connection
+        // POLYMORPHISM: Alternative constructor for different configurations
+        public DBConnection(string server, string database, string userId, string password)
+        {
+            _connectionString = BuildConnectionString(server, database, userId, password);
+            _connection = new MySqlConnection(_connectionString);
+        }
+
+        // ENCAPSULATION: Private method to build connection string
+        private string BuildConnectionString(
+            string server = "localhost", 
+            string database = "concertdb", 
+            string userId = "root", 
+            string password = "")
+        {
+            return $"server={server};user id={userId};password={password};database={database};" +
+                   "AllowLoadLocalInfile=true;default command timeout=600;Max Pool Size=100;";
+        }
+
+        // ABSTRACTION: Simple interface for getting connection
         public MySqlConnection GetConnection()
         {
-            return connection;
+            ValidateNotDisposed();
+            return _connection;
         }
 
-        // Optional: method to open connection safely
+        // ENCAPSULATION: Safe connection opening with error handling
         public void OpenConnection()
         {
-            if (connection.State == System.Data.ConnectionState.Closed)
+            ValidateNotDisposed();
+            
+            try
             {
-                connection.Open();
+                if (_connection.State == ConnectionState.Closed)
+                {
+                    _connection.Open();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                throw new DatabaseException($"Failed to open database connection: {ex.Message}", ex);
             }
         }
 
-        // Optional: method to close connection safely
+        // ENCAPSULATION: Safe connection closing
         public void CloseConnection()
         {
-            if (connection.State == System.Data.ConnectionState.Open)
+            try
             {
-                connection.Close();
+                if (_connection?.State == ConnectionState.Open)
+                {
+                    _connection.Close();
+                }
             }
+            catch (MySqlException ex)
+            {
+                // Log error but don't throw - closing should be safe
+                System.Diagnostics.Debug.WriteLine($"Error closing connection: {ex.Message}");
+            }
+        }
+
+        // ABSTRACTION: High-level method to test database connectivity
+        public bool TestConnection()
+        {
+            try
+            {
+                using (var testConnection = new MySqlConnection(_connectionString))
+                {
+                    testConnection.Open();
+                    return testConnection.State == ConnectionState.Open;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        // ENCAPSULATION: Private validation method
+        private void ValidateNotDisposed()
+        {
+            if (_disposed)
+                throw new ObjectDisposedException(nameof(DBConnection));
+        }
+
+        // POLYMORPHISM: Implementing IDisposable pattern
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        // ENCAPSULATION: Protected dispose method for inheritance
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!_disposed && disposing)
+            {
+                CloseConnection();
+                _connection?.Dispose();
+                _disposed = true;
+            }
+        }
+
+        // ABSTRACTION: Finalizer for cleanup
+        ~DBConnection()
+        {
+            Dispose(false);
+        }
+    }
+
+    // ABSTRACTION: Custom exception for database-related errors
+    // INHERITANCE: Inherits from Exception
+    public class DatabaseException : Exception
+    {
+        public DatabaseException(string message) : base(message) { }
+        public DatabaseException(string message, Exception innerException) : base(message, innerException) { }
+    }
+
+    // ABSTRACTION: Static factory class for creating database connections
+    // ENCAPSULATION: Hides complex creation logic
+    public static class DatabaseFactory
+    {
+        // POLYMORPHISM: Different ways to create connections
+        public static IDbConnection CreateConnection()
+        {
+            return new DBConnection();
+        }
+
+        public static IDbConnection CreateConnection(string server, string database, string userId, string password)
+        {
+            return new DBConnection(server, database, userId, password);
+        }
+
+        // ABSTRACTION: Method to create and test connection
+        public static IDbConnection CreateAndTestConnection()
+        {
+            var connection = new DBConnection();
+            if (!connection.TestConnection())
+            {
+                connection.Dispose();
+                throw new DatabaseException("Unable to establish database connection");
+            }
+            return connection;
         }
     }
 }

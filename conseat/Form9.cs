@@ -27,11 +27,7 @@ namespace conseat
         private void frmSelectGenAd_Load(object sender, EventArgs e)
         {
             LoadSeats();
-            // Initialize label
-            if (lblSelected != null)
-            {
-                lblSelected.Text = "Selected: None";
-            }
+            
         }
 
         private void LoadSeats()
@@ -133,14 +129,7 @@ namespace conseat
             clickedSeat.BackColor = Color.LightGreen;
 
             // Update label - make sure lblSelected exists
-            if (lblSelected != null)
-            {
-                lblSelected.Text = "Selected: Gen Ad-" + seatId;
-            }
-            else
-            {
-                MessageBox.Show("lblSelected control not found!");
-            }
+           
         }
 
         private void btnReserve_Click(object sender, EventArgs e)

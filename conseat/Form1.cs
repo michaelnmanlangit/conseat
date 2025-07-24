@@ -33,70 +33,71 @@ namespace conseat
             string password = txtPassword.Text;
             string hashedPassword = PasswordHelper.HashPassword(password);
 
-            DBConnection db = new DBConnection();
-            MySqlConnection conn = db.GetConnection();
-
-            try
+            using (var db = DatabaseFactory.CreateConnection())
             {
-                conn.Open();
-                string query = "SELECT * FROM users WHERE email=@em AND password=@pw";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@em", email);
-                cmd.Parameters.AddWithValue("@pw", hashedPassword);
-
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
+                try
                 {
-                    string role = reader["role"].ToString();
-                    string userEmail = reader["email"].ToString();
-                    int userId = Convert.ToInt32(reader["id"]);
+                    db.OpenConnection();
+                    string query = "SELECT id, email, first_name, last_name, role FROM users WHERE email=@em AND password=@pw";
+                    MySqlCommand cmd = new MySqlCommand(query, db.GetConnection());
+                    cmd.Parameters.AddWithValue("@em", email);
+                    cmd.Parameters.AddWithValue("@pw", hashedPassword);
 
-                    User user;
+                    MySqlDataReader reader = cmd.ExecuteReader();
 
-                    if (role == "Admin")
-                        user = new Admin();
-                    else
-                        user = new Customer();
-
-                    user.Id = userId;
-                    user.Email = userEmail;
-                    user.Role = role;
-
-                    // Set current user in session manager
-                    SessionManager.CurrentUser = user;
-
-                    MessageBox.Show(user.GetWelcomeMessage());
-
-                    this.Hide(); // Hide instead of close to keep application running
-
-                    if (role == "Admin")
+                    if (reader.Read())
                     {
-                        frmAdminDashboard adminDashboard = new frmAdminDashboard(user);
-                        adminDashboard.FormClosed += MainForm_FormClosed; // Handle when dashboard closes
-                        adminDashboard.Show();
+                        string role = reader["role"].ToString();
+                        string userEmail = reader["email"].ToString();
+                        int userId = Convert.ToInt32(reader["id"]);
+                        string firstName = reader["first_name"].ToString();
+                        string lastName = reader["last_name"].ToString();
+
+                        // Fix for C# 7.3 compatibility - explicit typing
+                        User user;
+                        if (role == "Admin")
+                        {
+                            user = new Admin();
+                        }
+                        else
+                        {
+                            user = new Customer();
+                        }
+
+                        user.Id = userId;
+                        user.Email = userEmail;
+                        user.FirstName = firstName;
+                        user.LastName = lastName;
+
+                        // Set current user in session manager
+                        SessionManager.CurrentUser = user;
+
+                        MessageBox.Show(user.GetWelcomeMessage());
+
+                        this.Hide(); // Hide instead of close to keep application running
+
+                        if (role == "Admin")
+                        {
+                            frmAdminDashboard adminDashboard = new frmAdminDashboard(user);
+                            adminDashboard.FormClosed += MainForm_FormClosed; // Handle when dashboard closes
+                            adminDashboard.Show();
+                        }
+                        else
+                        {
+                            frmCustomHome customerHome = new frmCustomHome(user);
+                            customerHome.FormClosed += MainForm_FormClosed; // Handle when home closes
+                            customerHome.Show();
+                        }
                     }
                     else
                     {
-                        frmCustomHome customerHome = new frmCustomHome(user);
-                        customerHome.FormClosed += MainForm_FormClosed; // Handle when home closes
-                        customerHome.Show();
+                        MessageBox.Show("Invalid email or password.");
                     }
-                    
-                    // DON'T CLOSE - just hide so app keeps running
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Invalid email or password.");
+                    MessageBox.Show("Error: " + ex.Message);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
             }
         }
 

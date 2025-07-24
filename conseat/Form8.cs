@@ -77,11 +77,6 @@ namespace conseat
         private void frmSelectUpper_Load(object sender, EventArgs e)
         {
             LoadSeats();
-            // Initialize label
-            if (lblSelected != null)
-            {
-                lblSelected.Text = "Selected: None";
-            }
         }
 
         private void LoadSeats()
@@ -273,15 +268,7 @@ namespace conseat
             selectedSeats.Add(seatId);
             clickedSeat.BackColor = Color.LightGreen;
 
-            // Update label - make sure lblSelected exists
-            if (lblSelected != null)
-            {
-                lblSelected.Text = "Selected: Upper Box-" + seatId;
-            }
-            else
-            {
-                MessageBox.Show("lblSelected control not found!");
-            }
+           
         }
 
         private void ResetAllSeatsToDefault(Panel panel)

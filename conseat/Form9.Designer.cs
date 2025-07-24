@@ -59,7 +59,6 @@
             this.picB4 = new System.Windows.Forms.PictureBox();
             this.picImage = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblSelected = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picC5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picC4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picC3)).BeginInit();
@@ -87,11 +86,11 @@
             // btnReserve
             // 
             this.btnReserve.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnReserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReserve.Location = new System.Drawing.Point(171, 560);
-            this.btnReserve.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReserve.Location = new System.Drawing.Point(128, 455);
             this.btnReserve.Name = "btnReserve";
-            this.btnReserve.Size = new System.Drawing.Size(100, 28);
+            this.btnReserve.Size = new System.Drawing.Size(75, 23);
             this.btnReserve.TabIndex = 41;
             this.btnReserve.Text = "SELECT";
             this.btnReserve.UseVisualStyleBackColor = false;
@@ -102,10 +101,10 @@
             this.picC5.BackColor = System.Drawing.Color.LightGray;
             this.picC5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picC5.Image = ((System.Drawing.Image)(resources.GetObject("picC5.Image")));
-            this.picC5.Location = new System.Drawing.Point(256, 153);
-            this.picC5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picC5.Location = new System.Drawing.Point(192, 124);
+            this.picC5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picC5.Name = "picC5";
-            this.picC5.Size = new System.Drawing.Size(41, 39);
+            this.picC5.Size = new System.Drawing.Size(31, 32);
             this.picC5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picC5.TabIndex = 31;
             this.picC5.TabStop = false;
@@ -115,10 +114,10 @@
             this.picC4.BackColor = System.Drawing.Color.LightGray;
             this.picC4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picC4.Image = ((System.Drawing.Image)(resources.GetObject("picC4.Image")));
-            this.picC4.Location = new System.Drawing.Point(199, 153);
-            this.picC4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picC4.Location = new System.Drawing.Point(149, 124);
+            this.picC4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picC4.Name = "picC4";
-            this.picC4.Size = new System.Drawing.Size(41, 39);
+            this.picC4.Size = new System.Drawing.Size(31, 32);
             this.picC4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picC4.TabIndex = 30;
             this.picC4.TabStop = false;
@@ -128,10 +127,10 @@
             this.picC3.BackColor = System.Drawing.Color.LightGray;
             this.picC3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picC3.Image = ((System.Drawing.Image)(resources.GetObject("picC3.Image")));
-            this.picC3.Location = new System.Drawing.Point(139, 153);
-            this.picC3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picC3.Location = new System.Drawing.Point(104, 124);
+            this.picC3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picC3.Name = "picC3";
-            this.picC3.Size = new System.Drawing.Size(41, 39);
+            this.picC3.Size = new System.Drawing.Size(31, 32);
             this.picC3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picC3.TabIndex = 29;
             this.picC3.TabStop = false;
@@ -141,10 +140,10 @@
             this.picC2.BackColor = System.Drawing.Color.LightGray;
             this.picC2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picC2.Image = ((System.Drawing.Image)(resources.GetObject("picC2.Image")));
-            this.picC2.Location = new System.Drawing.Point(81, 153);
-            this.picC2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picC2.Location = new System.Drawing.Point(61, 124);
+            this.picC2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picC2.Name = "picC2";
-            this.picC2.Size = new System.Drawing.Size(41, 39);
+            this.picC2.Size = new System.Drawing.Size(31, 32);
             this.picC2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picC2.TabIndex = 28;
             this.picC2.TabStop = false;
@@ -154,10 +153,10 @@
             this.picC1.BackColor = System.Drawing.Color.LightGray;
             this.picC1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picC1.Image = ((System.Drawing.Image)(resources.GetObject("picC1.Image")));
-            this.picC1.Location = new System.Drawing.Point(24, 153);
-            this.picC1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picC1.Location = new System.Drawing.Point(18, 124);
+            this.picC1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picC1.Name = "picC1";
-            this.picC1.Size = new System.Drawing.Size(41, 39);
+            this.picC1.Size = new System.Drawing.Size(31, 32);
             this.picC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picC1.TabIndex = 27;
             this.picC1.TabStop = false;
@@ -184,10 +183,9 @@
             this.panelSeats.Controls.Add(this.picB2);
             this.panelSeats.Controls.Add(this.picB5);
             this.panelSeats.Controls.Add(this.picB4);
-            this.panelSeats.Location = new System.Drawing.Point(53, 261);
-            this.panelSeats.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSeats.Location = new System.Drawing.Point(40, 212);
             this.panelSeats.Name = "panelSeats";
-            this.panelSeats.Size = new System.Drawing.Size(329, 267);
+            this.panelSeats.Size = new System.Drawing.Size(247, 217);
             this.panelSeats.TabIndex = 39;
             this.panelSeats.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSeats_Paint);
             // 
@@ -196,10 +194,10 @@
             this.picD5.BackColor = System.Drawing.Color.LightGray;
             this.picD5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picD5.Image = ((System.Drawing.Image)(resources.GetObject("picD5.Image")));
-            this.picD5.Location = new System.Drawing.Point(256, 207);
-            this.picD5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picD5.Location = new System.Drawing.Point(192, 168);
+            this.picD5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picD5.Name = "picD5";
-            this.picD5.Size = new System.Drawing.Size(41, 39);
+            this.picD5.Size = new System.Drawing.Size(31, 32);
             this.picD5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picD5.TabIndex = 36;
             this.picD5.TabStop = false;
@@ -209,10 +207,10 @@
             this.picD4.BackColor = System.Drawing.Color.LightGray;
             this.picD4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picD4.Image = ((System.Drawing.Image)(resources.GetObject("picD4.Image")));
-            this.picD4.Location = new System.Drawing.Point(199, 207);
-            this.picD4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picD4.Location = new System.Drawing.Point(149, 168);
+            this.picD4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picD4.Name = "picD4";
-            this.picD4.Size = new System.Drawing.Size(41, 39);
+            this.picD4.Size = new System.Drawing.Size(31, 32);
             this.picD4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picD4.TabIndex = 35;
             this.picD4.TabStop = false;
@@ -222,10 +220,10 @@
             this.picD3.BackColor = System.Drawing.Color.LightGray;
             this.picD3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picD3.Image = ((System.Drawing.Image)(resources.GetObject("picD3.Image")));
-            this.picD3.Location = new System.Drawing.Point(139, 207);
-            this.picD3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picD3.Location = new System.Drawing.Point(104, 168);
+            this.picD3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picD3.Name = "picD3";
-            this.picD3.Size = new System.Drawing.Size(41, 39);
+            this.picD3.Size = new System.Drawing.Size(31, 32);
             this.picD3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picD3.TabIndex = 34;
             this.picD3.TabStop = false;
@@ -235,10 +233,10 @@
             this.picD2.BackColor = System.Drawing.Color.LightGray;
             this.picD2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picD2.Image = ((System.Drawing.Image)(resources.GetObject("picD2.Image")));
-            this.picD2.Location = new System.Drawing.Point(81, 207);
-            this.picD2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picD2.Location = new System.Drawing.Point(61, 168);
+            this.picD2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picD2.Name = "picD2";
-            this.picD2.Size = new System.Drawing.Size(41, 39);
+            this.picD2.Size = new System.Drawing.Size(31, 32);
             this.picD2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picD2.TabIndex = 33;
             this.picD2.TabStop = false;
@@ -248,10 +246,10 @@
             this.picD1.BackColor = System.Drawing.Color.LightGray;
             this.picD1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picD1.Image = ((System.Drawing.Image)(resources.GetObject("picD1.Image")));
-            this.picD1.Location = new System.Drawing.Point(24, 207);
-            this.picD1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picD1.Location = new System.Drawing.Point(18, 168);
+            this.picD1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picD1.Name = "picD1";
-            this.picD1.Size = new System.Drawing.Size(41, 39);
+            this.picD1.Size = new System.Drawing.Size(31, 32);
             this.picD1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picD1.TabIndex = 32;
             this.picD1.TabStop = false;
@@ -261,10 +259,10 @@
             this.picB3.BackColor = System.Drawing.Color.LightGray;
             this.picB3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picB3.Image = ((System.Drawing.Image)(resources.GetObject("picB3.Image")));
-            this.picB3.Location = new System.Drawing.Point(139, 90);
-            this.picB3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picB3.Location = new System.Drawing.Point(104, 73);
+            this.picB3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picB3.Name = "picB3";
-            this.picB3.Size = new System.Drawing.Size(41, 39);
+            this.picB3.Size = new System.Drawing.Size(31, 32);
             this.picB3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picB3.TabIndex = 24;
             this.picB3.TabStop = false;
@@ -274,10 +272,10 @@
             this.picA1.BackColor = System.Drawing.Color.LightGray;
             this.picA1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picA1.Image = ((System.Drawing.Image)(resources.GetObject("picA1.Image")));
-            this.picA1.Location = new System.Drawing.Point(24, 31);
-            this.picA1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picA1.Location = new System.Drawing.Point(18, 25);
+            this.picA1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picA1.Name = "picA1";
-            this.picA1.Size = new System.Drawing.Size(41, 39);
+            this.picA1.Size = new System.Drawing.Size(31, 32);
             this.picA1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picA1.TabIndex = 17;
             this.picA1.TabStop = false;
@@ -287,10 +285,10 @@
             this.picA2.BackColor = System.Drawing.Color.LightGray;
             this.picA2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picA2.Image = ((System.Drawing.Image)(resources.GetObject("picA2.Image")));
-            this.picA2.Location = new System.Drawing.Point(81, 31);
-            this.picA2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picA2.Location = new System.Drawing.Point(61, 25);
+            this.picA2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picA2.Name = "picA2";
-            this.picA2.Size = new System.Drawing.Size(41, 39);
+            this.picA2.Size = new System.Drawing.Size(31, 32);
             this.picA2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picA2.TabIndex = 18;
             this.picA2.TabStop = false;
@@ -300,10 +298,10 @@
             this.picA3.BackColor = System.Drawing.Color.LightGray;
             this.picA3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picA3.Image = ((System.Drawing.Image)(resources.GetObject("picA3.Image")));
-            this.picA3.Location = new System.Drawing.Point(139, 31);
-            this.picA3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picA3.Location = new System.Drawing.Point(104, 25);
+            this.picA3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picA3.Name = "picA3";
-            this.picA3.Size = new System.Drawing.Size(41, 39);
+            this.picA3.Size = new System.Drawing.Size(31, 32);
             this.picA3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picA3.TabIndex = 19;
             this.picA3.TabStop = false;
@@ -313,10 +311,10 @@
             this.picA4.BackColor = System.Drawing.Color.LightGray;
             this.picA4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picA4.Image = ((System.Drawing.Image)(resources.GetObject("picA4.Image")));
-            this.picA4.Location = new System.Drawing.Point(199, 31);
-            this.picA4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picA4.Location = new System.Drawing.Point(149, 25);
+            this.picA4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picA4.Name = "picA4";
-            this.picA4.Size = new System.Drawing.Size(41, 39);
+            this.picA4.Size = new System.Drawing.Size(31, 32);
             this.picA4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picA4.TabIndex = 20;
             this.picA4.TabStop = false;
@@ -326,10 +324,10 @@
             this.picA5.BackColor = System.Drawing.Color.LightGray;
             this.picA5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picA5.Image = ((System.Drawing.Image)(resources.GetObject("picA5.Image")));
-            this.picA5.Location = new System.Drawing.Point(256, 31);
-            this.picA5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picA5.Location = new System.Drawing.Point(192, 25);
+            this.picA5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picA5.Name = "picA5";
-            this.picA5.Size = new System.Drawing.Size(41, 39);
+            this.picA5.Size = new System.Drawing.Size(31, 32);
             this.picA5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picA5.TabIndex = 21;
             this.picA5.TabStop = false;
@@ -339,10 +337,10 @@
             this.picB1.BackColor = System.Drawing.Color.LightGray;
             this.picB1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picB1.Image = ((System.Drawing.Image)(resources.GetObject("picB1.Image")));
-            this.picB1.Location = new System.Drawing.Point(24, 90);
-            this.picB1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picB1.Location = new System.Drawing.Point(18, 73);
+            this.picB1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picB1.Name = "picB1";
-            this.picB1.Size = new System.Drawing.Size(41, 39);
+            this.picB1.Size = new System.Drawing.Size(31, 32);
             this.picB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picB1.TabIndex = 22;
             this.picB1.TabStop = false;
@@ -352,10 +350,10 @@
             this.picB2.BackColor = System.Drawing.Color.LightGray;
             this.picB2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picB2.Image = ((System.Drawing.Image)(resources.GetObject("picB2.Image")));
-            this.picB2.Location = new System.Drawing.Point(81, 90);
-            this.picB2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picB2.Location = new System.Drawing.Point(61, 73);
+            this.picB2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picB2.Name = "picB2";
-            this.picB2.Size = new System.Drawing.Size(41, 39);
+            this.picB2.Size = new System.Drawing.Size(31, 32);
             this.picB2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picB2.TabIndex = 23;
             this.picB2.TabStop = false;
@@ -365,10 +363,10 @@
             this.picB5.BackColor = System.Drawing.Color.LightGray;
             this.picB5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picB5.Image = ((System.Drawing.Image)(resources.GetObject("picB5.Image")));
-            this.picB5.Location = new System.Drawing.Point(256, 90);
-            this.picB5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picB5.Location = new System.Drawing.Point(192, 73);
+            this.picB5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picB5.Name = "picB5";
-            this.picB5.Size = new System.Drawing.Size(41, 39);
+            this.picB5.Size = new System.Drawing.Size(31, 32);
             this.picB5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picB5.TabIndex = 26;
             this.picB5.TabStop = false;
@@ -378,10 +376,10 @@
             this.picB4.BackColor = System.Drawing.Color.LightGray;
             this.picB4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picB4.Image = ((System.Drawing.Image)(resources.GetObject("picB4.Image")));
-            this.picB4.Location = new System.Drawing.Point(199, 90);
-            this.picB4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picB4.Location = new System.Drawing.Point(149, 73);
+            this.picB4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picB4.Name = "picB4";
-            this.picB4.Size = new System.Drawing.Size(41, 39);
+            this.picB4.Size = new System.Drawing.Size(31, 32);
             this.picB4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picB4.TabIndex = 25;
             this.picB4.TabStop = false;
@@ -390,10 +388,9 @@
             // 
             this.picImage.BackColor = System.Drawing.Color.Transparent;
             this.picImage.Image = ((System.Drawing.Image)(resources.GetObject("picImage.Image")));
-            this.picImage.Location = new System.Drawing.Point(7, 50);
-            this.picImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picImage.Location = new System.Drawing.Point(5, 41);
             this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(47, 43);
+            this.picImage.Size = new System.Drawing.Size(35, 35);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImage.TabIndex = 38;
             this.picImage.TabStop = false;
@@ -405,41 +402,27 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1, 212);
+            this.label1.Location = new System.Drawing.Point(1, 172);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(443, 25);
+            this.label1.Size = new System.Drawing.Size(332, 20);
             this.label1.TabIndex = 40;
             this.label1.Text = "GEN AD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lblSelected
-            // 
-            this.lblSelected.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSelected.BackColor = System.Drawing.Color.Transparent;
-            this.lblSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelected.ForeColor = System.Drawing.Color.White;
-            this.lblSelected.Location = new System.Drawing.Point(48, 549);
-            this.lblSelected.Name = "lblSelected";
-            this.lblSelected.Size = new System.Drawing.Size(168, 25);
-            this.lblSelected.TabIndex = 37;
-            this.lblSelected.Click += new System.EventHandler(this.lblSelected_Click);
-            // 
             // frmSelectGenAd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(445, 641);
+            this.ClientSize = new System.Drawing.Size(334, 521);
             this.Controls.Add(this.btnReserve);
             this.Controls.Add(this.panelSeats);
             this.Controls.Add(this.picImage);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblSelected);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmSelectGenAd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form9";
@@ -496,6 +479,5 @@
         private System.Windows.Forms.PictureBox picB4;
         private System.Windows.Forms.PictureBox picImage;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblSelected;
     }
 }
