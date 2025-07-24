@@ -291,5 +291,10 @@ namespace conseat
         private void picD3_Click(object sender, EventArgs e) { Seat_Click(sender, e); }
         private void picD4_Click(object sender, EventArgs e) { Seat_Click(sender, e); }
         private void picD5_Click(object sender, EventArgs e) { Seat_Click(sender, e); }
+
+        private void picImage_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

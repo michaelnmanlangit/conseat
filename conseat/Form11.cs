@@ -480,7 +480,7 @@ namespace conseat
 
         private void label1_Click(object sender, EventArgs e)
         {
-            // Label click event - no specific functionality needed
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -518,6 +518,16 @@ namespace conseat
                     e.Handled = true;
                 }
             }
+        }
+
+        private void pnlBackG_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void picBack_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

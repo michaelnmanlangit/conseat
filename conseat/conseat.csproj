@@ -268,6 +268,7 @@
     <EmbeddedResource Include="ucManageSales.resx">
       <DependentUpon>ucManageSales.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ConSeat_CodeFlow_and_OOP_Implementation_Guide.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -305,9 +306,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sign-out-svgrepo-com %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="database_payments_setup.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

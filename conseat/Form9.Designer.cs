@@ -88,7 +88,7 @@
             this.btnReserve.BackColor = System.Drawing.Color.LimeGreen;
             this.btnReserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReserve.Location = new System.Drawing.Point(128, 455);
+            this.btnReserve.Location = new System.Drawing.Point(212, 452);
             this.btnReserve.Name = "btnReserve";
             this.btnReserve.Size = new System.Drawing.Size(75, 23);
             this.btnReserve.TabIndex = 41;
@@ -394,6 +394,7 @@
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImage.TabIndex = 38;
             this.picImage.TabStop = false;
+            this.picImage.Click += new System.EventHandler(this.picImage_Click);
             // 
             // label1
             // 

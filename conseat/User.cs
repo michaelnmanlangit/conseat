@@ -143,14 +143,6 @@ namespace conseat
             return ValidateUserData();
         }
 
-        public bool CanViewReports()
-        {
-            return ValidateUserData();
-        }
-
-        public bool CanManageUsers()
-        {
-            return ValidateUserData();
-        }
+        
     }
 }

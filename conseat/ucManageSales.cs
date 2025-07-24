@@ -16,5 +16,10 @@ namespace conseat
         {
             InitializeComponent();
         }
+
+        private void ucManageSales_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

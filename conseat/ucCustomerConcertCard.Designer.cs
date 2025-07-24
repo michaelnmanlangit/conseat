@@ -50,13 +50,16 @@
             // 
             // btnBuyTicket
             // 
+            this.btnBuyTicket.BackColor = System.Drawing.Color.SteelBlue;
             this.btnBuyTicket.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnBuyTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuyTicket.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnBuyTicket.Location = new System.Drawing.Point(0, 130);
             this.btnBuyTicket.Name = "btnBuyTicket";
             this.btnBuyTicket.Size = new System.Drawing.Size(151, 35);
             this.btnBuyTicket.TabIndex = 2;
             this.btnBuyTicket.Text = "Buy Ticket";
-            this.btnBuyTicket.UseVisualStyleBackColor = true;
+            this.btnBuyTicket.UseVisualStyleBackColor = false;
             this.btnBuyTicket.Click += new System.EventHandler(this.button1_Click);
             // 
             // picArtist

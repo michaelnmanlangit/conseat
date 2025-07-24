@@ -34,6 +34,8 @@ namespace conseat
             concertID = id;
             isEditMode = true;
             lblTitle.Text = "Edit Concert Event";
+            dtpDate.Format = DateTimePickerFormat.Custom;
+            dtpDate.CustomFormat = "yyyy-MM-dd";
             LoadConcertData();
 
             

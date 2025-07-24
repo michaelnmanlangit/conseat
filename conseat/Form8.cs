@@ -292,7 +292,7 @@ namespace conseat
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnReserve_Click(object sender, EventArgs e)

@@ -62,7 +62,10 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(0, 205);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(-1, 174);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(334, 24);
@@ -74,6 +77,8 @@
             // lnkBuy
             // 
             this.lnkBuy.AutoSize = true;
+            this.lnkBuy.BackColor = System.Drawing.Color.Transparent;
+            this.lnkBuy.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.lnkBuy.Location = new System.Drawing.Point(119, 417);
             this.lnkBuy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkBuy.Name = "lnkBuy";
@@ -94,7 +99,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.picHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmThanks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form12";

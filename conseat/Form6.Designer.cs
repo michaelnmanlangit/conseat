@@ -333,7 +333,7 @@
             this.btnReserve.BackColor = System.Drawing.Color.LimeGreen;
             this.btnReserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReserve.Location = new System.Drawing.Point(120, 430);
+            this.btnReserve.Location = new System.Drawing.Point(209, 430);
             this.btnReserve.Name = "btnReserve";
             this.btnReserve.Size = new System.Drawing.Size(75, 23);
             this.btnReserve.TabIndex = 36;

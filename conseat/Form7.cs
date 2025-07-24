@@ -42,7 +42,28 @@ namespace conseat
             if (SessionManager.CurrentConcertId != null)
             {
                 lblArtistName.Text = SessionManager.CurrentConcertName;
-                lblDateTime.Text = $"{SessionManager.CurrentConcertDate.ToShortDateString()} {SessionManager.CurrentConcertTime}";
+                
+                // Format date and time properly - date only + 12-hour time format
+                string formattedDate = SessionManager.CurrentConcertDate.ToString("MMMM dd, yyyy");
+                string formattedTime = "";
+                
+                // Parse and format the time to 12-hour format
+                if (TimeSpan.TryParse(SessionManager.CurrentConcertTime, out TimeSpan parsedTime))
+                {
+                    DateTime timeOnly = DateTime.Today.Add(parsedTime);
+                    formattedTime = timeOnly.ToString("h:mm tt");
+                }
+                else if (DateTime.TryParse(SessionManager.CurrentConcertTime, out DateTime parsedDateTime))
+                {
+                    formattedTime = parsedDateTime.ToString("h:mm tt");
+                }
+                else
+                {
+                    formattedTime = SessionManager.CurrentConcertTime; // fallback
+                }
+                
+                lblDateTime.Text = $"{formattedDate} • {formattedTime}";
+                
                 lblVenue.Text = SessionManager.CurrentConcertVenue;
                 lblBlockSeatNo.Text = $"{seatType}-{seatId}";
                 lblPrice.Text = $"₱{actualPrice:N2}";
@@ -238,18 +259,9 @@ namespace conseat
         private void btnProceedPayment_Click(object sender, EventArgs e)
         {
             frmPaymentMethod paymentForm = new frmPaymentMethod(seatType, seatId, price);
-            
-            // Instead of using SessionManager.ShowModalDialog, use a custom approach
-            // that will close this checkout form when the payment process completes
             this.Hide();
-            
-            paymentForm.FormClosed += (s, args) => {
-                // When payment form closes, close this checkout form too
-                // (the payment flow will handle showing the thanks form)
-                this.Close();
-            };
-            
             paymentForm.ShowDialog();
+            this.Close();
         }
 
         private void lblPrice_Click(object sender, EventArgs e)
@@ -278,6 +290,11 @@ namespace conseat
         }
 
         private void btnBack_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -20,15 +20,33 @@ namespace conseat
 
             concertId = id;
             lblArtistName.Text = artistName;
-            lblDate.Text = eventDate;
-            lblTime.Text = eventTime;
             lblVenue.Text = venueName;
             picImage.Image = artistImage;
             
-            // Set concert context in session with image
+            // Format date to display only date without time
             if (DateTime.TryParse(eventDate, out DateTime parsedDate))
             {
+                lblDate.Text = parsedDate.ToString("MMMM dd, yyyy"); // e.g., "December 25, 2024"
                 SessionManager.SetConcertContext(id, artistName, parsedDate, eventTime, venueName, artistImage);
+            }
+            else
+            {
+                lblDate.Text = eventDate; // fallback if parsing fails
+            }
+
+            // Format time to 12-hour format
+            if (TimeSpan.TryParse(eventTime, out TimeSpan parsedTime))
+            {
+                DateTime timeOnly = DateTime.Today.Add(parsedTime);
+                lblTime.Text = timeOnly.ToString("h:mm tt"); // e.g., "7:30 PM"
+            }
+            else if (DateTime.TryParse(eventTime, out DateTime parsedDateTime))
+            {
+                lblTime.Text = parsedDateTime.ToString("h:mm tt"); // e.g., "7:30 PM"
+            }
+            else
+            {
+                lblTime.Text = eventTime; // fallback if parsing fails
             }
         }
 

@@ -43,6 +43,8 @@
             // 
             // btnSelectSeat
             // 
+            this.btnSelectSeat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSelectSeat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectSeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectSeat.ForeColor = System.Drawing.Color.Purple;
             this.btnSelectSeat.Location = new System.Drawing.Point(69, 444);
@@ -50,7 +52,7 @@
             this.btnSelectSeat.Size = new System.Drawing.Size(198, 37);
             this.btnSelectSeat.TabIndex = 15;
             this.btnSelectSeat.Text = "SELECT YOUR DESIRED SEAT";
-            this.btnSelectSeat.UseVisualStyleBackColor = true;
+            this.btnSelectSeat.UseVisualStyleBackColor = false;
             this.btnSelectSeat.Click += new System.EventHandler(this.btnSelectSeat_Click);
             // 
             // picImage
