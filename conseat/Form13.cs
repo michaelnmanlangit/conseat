@@ -10,7 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace conseat
 {
     public partial class frmAdminDashboard : Form
@@ -38,8 +37,6 @@ namespace conseat
             cmbSort.Items.AddRange(new string[] { "A-Z", "Z-A", "Time" });
             cmbSort.SelectedIndex = 0;
         }
-
-
 
         //load a user control into the main content panel
         private void LoadControl(UserControl control)
@@ -76,7 +73,6 @@ namespace conseat
         {
             LoadControl(new ucManageSales());
         }
-
 
         // Method to load concerts with keyword and sorting
         private void LoadConcerts(string keyword = "", string sort = "")
@@ -204,8 +200,6 @@ namespace conseat
             RefreshConcerts();
         }
 
-       
-
         private void cmbSort_SelectedIndexChanged(object sender, EventArgs e)
         {
             RefreshConcerts();
@@ -219,8 +213,15 @@ namespace conseat
         }
 
         // Logout button
-        
-        
+        private void picLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                SessionManager.ClearSession();
+                this.Close(); // This will trigger the FormClosed event in login form to show it again
+            }
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e) {
 
@@ -232,17 +233,6 @@ namespace conseat
 
         private void pnlNav_Paint(object sender, PaintEventArgs e) {
         
-        }
-
-        private void picLogout_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                frmLogin loginForm = new frmLogin();
-                loginForm.Show();
-                this.Close();
-            }
         }
     }
 }

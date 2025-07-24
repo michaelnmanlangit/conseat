@@ -356,9 +356,7 @@ namespace conseat
                 // Seat is available, proceed to checkout WITHOUT reserving it yet
                 // The seat will only be reserved after successful payment
                 frmCheckOut checkoutForm = new frmCheckOut("Upper Box", selectedSeatId, upperBoxPrice);
-                this.Hide();
-                checkoutForm.ShowDialog();
-                this.Close();
+                SessionManager.ShowModalDialog(this, checkoutForm);
             }
             catch (Exception ex)
             {

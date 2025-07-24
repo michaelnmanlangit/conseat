@@ -22,7 +22,6 @@ namespace conseat
         {
         }
 
-
         // Set default sort options
         private void SetupSortOptions()
         {
@@ -123,7 +122,7 @@ namespace conseat
                                 frmConcertDetails detailForm = new frmConcertDetails(
                                     id, artistName, eventDate, eventTime, venueName, image
                                 );
-                                detailForm.ShowDialog();
+                                SessionManager.ShowModalDialog(this, detailForm);
                             };
 
                             flpConcerts.Controls.Add(card);
@@ -161,9 +160,8 @@ namespace conseat
             DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                frmLogin loginForm = new frmLogin();
-                loginForm.Show();
-                this.Close();
+                SessionManager.ClearSession();
+                this.Close(); // This will trigger the FormClosed event in login form to show it again
             }
         }
 
@@ -179,10 +177,8 @@ namespace conseat
             RefreshConcerts();
         }
 
-        
         private void pnlMainContent_Paint(object sender, PaintEventArgs e) { }
 
-        
         private void Form3_Load(object sender, EventArgs e) {
 
             SetupSortOptions();

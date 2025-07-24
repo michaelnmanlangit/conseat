@@ -47,10 +47,17 @@ namespace conseat
             else if (rbtnPaymaya.Checked) paymentMethod = "PayMaya";
             else if (rbtnCreditCard.Checked) paymentMethod = "Credit Card";
 
-            // Navigate to Send Payment form instead of showing completion message
-            frmSendPayment sendPaymentForm = new frmSendPayment(paymentMethod, seatType, seatId, price);
+            // Hide current form first
             this.Hide();
+            
+            // Create and show the send payment form
+            frmSendPayment sendPaymentForm = new frmSendPayment(paymentMethod, seatType, seatId, price);
+            sendPaymentForm.FormClosed += SendPaymentForm_FormClosed; // Close this form when child closes
             sendPaymentForm.ShowDialog();
+        }
+
+        private void SendPaymentForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
             this.Close();
         }
 

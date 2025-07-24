@@ -238,9 +238,18 @@ namespace conseat
         private void btnProceedPayment_Click(object sender, EventArgs e)
         {
             frmPaymentMethod paymentForm = new frmPaymentMethod(seatType, seatId, price);
+            
+            // Instead of using SessionManager.ShowModalDialog, use a custom approach
+            // that will close this checkout form when the payment process completes
             this.Hide();
+            
+            paymentForm.FormClosed += (s, args) => {
+                // When payment form closes, close this checkout form too
+                // (the payment flow will handle showing the thanks form)
+                this.Close();
+            };
+            
             paymentForm.ShowDialog();
-            this.Close();
         }
 
         private void lblPrice_Click(object sender, EventArgs e)

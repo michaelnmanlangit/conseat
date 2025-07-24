@@ -27,27 +27,36 @@ namespace conseat
             // Center the form on screen
             this.StartPosition = FormStartPosition.CenterScreen;
             
+            // Ensure the form is on top
+            this.TopMost = true;
+            this.WindowState = FormWindowState.Normal;
+            this.BringToFront();
+            this.Activate();
+            
             // Set focus to prevent any control from being highlighted
             this.Focus();
 
-            // If no custom message has been set, show default message
-            if (label1.Text == "Thank You!")
+            // Close any remaining reservation forms that might still be open
+            SessionManager.CloseAllReservationForms(this);
+
+            // Set simple thank you message
+            SetSimpleThankYouMessage();
+            
+            // Remove TopMost after a short delay so it doesn't stay always on top
+            Timer timer = new Timer();
+            timer.Interval = 1000; // 1 second
+            timer.Tick += (s, args) =>
             {
-                SetDefaultThankYouMessage();
-            }
+                this.TopMost = false;
+                timer.Stop();
+                timer.Dispose();
+            };
+            timer.Start();
         }
 
-        private void SetDefaultThankYouMessage()
+        private void SetSimpleThankYouMessage()
         {
-            if (SessionManager.CurrentUser != null)
-            {
-                string userType = SessionManager.CurrentUser.Role == "Admin" ? "Admin" : "Customer";
-                label1.Text = $"Thank You!\n\nYour transaction has been completed successfully.\n\nWelcome {userType}: {SessionManager.CurrentUser.Email}";
-            }
-            else
-            {
-                label1.Text = "Thank You!\n\nYour transaction has been completed successfully.";
-            }
+           
         }
 
         private void picHome_Click(object sender, EventArgs e)
@@ -83,6 +92,9 @@ namespace conseat
             // Check if user is still logged in
             if (SessionManager.CurrentUser != null)
             {
+                // Hide current form first to prevent flickering
+                this.Hide();
+                
                 // Navigate back to the appropriate dashboard based on user role
                 if (SessionManager.CurrentUser.Role == "Admin")
                 {
@@ -95,6 +107,7 @@ namespace conseat
                     customerHome.Show();
                 }
                 
+                // Close this form after showing the new one
                 this.Close();
             }
             else
@@ -102,48 +115,11 @@ namespace conseat
                 // User session expired, redirect to login
                 MessageBox.Show("Your session has expired. Please login again.", "Session Expired", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
+                this.Hide();
                 frmLogin loginForm = new frmLogin();
                 loginForm.Show();
-                
                 this.Close();
             }
-        }
-
-        // Method to display transaction details after payment
-        public void SetTransactionDetails(string transactionId, string eventName, int ticketCount, decimal totalAmount)
-        {
-            // Enhance the thank you message with transaction details
-            string message = "Thank You for Your Purchase!\n\n" +
-                           "Your payment has been processed successfully.\n\n" +
-                           $"Transaction Details:\n" +
-                           $"Transaction ID: {transactionId}\n" +
-                           $"Event: {eventName}\n" +
-                           $"Tickets: {ticketCount}\n" +
-                           $"Total Amount: ₱{totalAmount:N2}\n" +
-                           $"Date: {DateTime.Now.ToString("MM/dd/yyyy HH:mm")}\n\n" +
-                           "Your seat has been reserved and you will receive a confirmation shortly.";
-
-            label1.Text = message;
-            
-            // Make the label multi-line and adjust font size if needed
-            label1.AutoSize = false;
-            label1.Size = new Size(280, 250);
-            label1.TextAlign = ContentAlignment.TopCenter;
-            
-            // Adjust font size if text is too long
-            if (message.Length > 200)
-            {
-                label1.Font = new Font(label1.Font.FontFamily, 8, label1.Font.Style);
-            }
-        }
-
-        // Method to set custom thank you message
-        public void SetCustomMessage(string message)
-        {
-            label1.Text = message;
-            label1.AutoSize = false;
-            label1.Size = new Size(280, 200);
-            label1.TextAlign = ContentAlignment.TopCenter;
         }
 
         // Handle form closing event
@@ -151,20 +127,6 @@ namespace conseat
         {
             // Clear concert context when leaving thank you page
             // Don't clear user session as they might want to continue shopping
-        }
-
-        // Method to show payment confirmation details
-        public void ShowPaymentConfirmation(string paymentMethod, string seatInfo, decimal amount)
-        {
-            string message = "Payment Successful!\n\n" +
-                           $"Payment Method: {paymentMethod}\n" +
-                           $"Seat: {seatInfo}\n" +
-                           $"Amount: ₱{amount:N2}\n" +
-                           $"Date: {DateTime.Now.ToString("MM/dd/yyyy HH:mm")}\n\n" +
-                           "Thank you for your purchase!\n" +
-                           "Your ticket confirmation will be sent to your email.";
-
-            SetCustomMessage(message);
         }
 
         // Optional: Add logout functionality as a separate method
@@ -180,6 +142,9 @@ namespace conseat
             {
                 // Clear the current user session
                 SessionManager.ClearSession();
+
+                // Hide current form first
+                this.Hide();
 
                 // Close all open forms except the main login form
                 Form[] openForms = Application.OpenForms.Cast<Form>().ToArray();
@@ -229,6 +194,11 @@ namespace conseat
         }
 
         private void lnkBuy_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

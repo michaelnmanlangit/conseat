@@ -68,12 +68,22 @@ namespace conseat
 
                     MessageBox.Show(user.GetWelcomeMessage());
 
-                    this.Hide();
+                    this.Hide(); // Hide instead of close to keep application running
 
                     if (role == "Admin")
-                        new frmAdminDashboard(user).Show();
+                    {
+                        frmAdminDashboard adminDashboard = new frmAdminDashboard(user);
+                        adminDashboard.FormClosed += MainForm_FormClosed; // Handle when dashboard closes
+                        adminDashboard.Show();
+                    }
                     else
-                        new frmCustomHome(user).Show();
+                    {
+                        frmCustomHome customerHome = new frmCustomHome(user);
+                        customerHome.FormClosed += MainForm_FormClosed; // Handle when home closes
+                        customerHome.Show();
+                    }
+                    
+                    // DON'T CLOSE - just hide so app keeps running
                 }
                 else
                 {
@@ -90,13 +100,23 @@ namespace conseat
             }
         }
 
-
+        // Handle when main dashboard/home forms close - show login again or exit
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // When the main form closes, show login again or exit
+            this.Show();
+            
+            // Clear the session when returning to login
+            SessionManager.ClearSession();
+            
+            // Clear the form fields for security
+            txtEmail.Clear();
+            txtPassword.Clear();
+        }
 
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
-            new frmSignUp().Show();
-
+            SessionManager.ShowModalDialog(this, new frmSignUp());
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

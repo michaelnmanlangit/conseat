@@ -14,7 +14,6 @@ namespace conseat
     public partial class frmSignUp : Form
     {
 
-
         public frmSignUp()
         {
             InitializeComponent();
@@ -34,8 +33,7 @@ namespace conseat
 
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
-            new frmLogin().Show();
+            this.Close();
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
@@ -73,8 +71,7 @@ namespace conseat
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Account created successfully!");
-                this.Hide();
-                new frmLogin().Show();
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -95,7 +92,6 @@ namespace conseat
         {
 
         }
-
 
         private void picEyeOpen_Click_1(object sender, EventArgs e)
         {

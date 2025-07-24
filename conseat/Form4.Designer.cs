@@ -104,6 +104,7 @@
             this.lblDate.TabIndex = 10;
             this.lblDate.Text = "July 18, 2025";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // label2
             // 

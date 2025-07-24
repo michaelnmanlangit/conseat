@@ -395,28 +395,56 @@ namespace conseat
             {
                 // Create the thank you form
                 frmThanks thanksForm = new frmThanks();
-                
-                // Set transaction details on the thank you form
-                string transactionId = $"TXN{DateTime.Now.ToString("yyyyMMddHHmmss")}{SessionManager.CurrentUser.Id}";
-                thanksForm.SetTransactionDetails(
-                    transactionId,
-                    SessionManager.CurrentConcertName ?? "Concert Event",
-                    1, // ticket count
-                    price
-                );
 
-                // Close all payment-related forms
-                Form[] formsToClose = Application.OpenForms.Cast<Form>()
-                    .Where(f => f.Name.Contains("Payment") || f.Name.Contains("Select") || f == this)
-                    .ToArray();
+                // Set the thanks form to be topmost and centered
+                thanksForm.TopMost = true;
+                thanksForm.StartPosition = FormStartPosition.CenterScreen;
+                thanksForm.WindowState = FormWindowState.Normal;
 
-                // Show the thanks form
+                // Show the thanks form FIRST
                 thanksForm.Show();
+                
+                // Force it to be on top and focused
+                thanksForm.BringToFront();
+                thanksForm.Activate();
+                thanksForm.Focus();
 
-                // Close payment forms after showing thanks form
-                foreach (Form form in formsToClose)
+                // Close ALL forms in the entire reservation/checkout chain
+                // This includes ALL forms except the main dashboard and the thanks form
+                Form[] allOpenForms = Application.OpenForms.Cast<Form>().ToArray();
+                
+                foreach (Form form in allOpenForms)
                 {
-                    form.Close();
+                    // Close forms by type name to be more specific
+                    string formTypeName = form.GetType().Name;
+                    
+                    if (formTypeName == "frmConcertDetails" ||      // Form4 - Concert Details
+                        formTypeName == "frmSelectSeat" ||          // Form5 - Seat Selection
+                        formTypeName == "frmSelectVip" ||           // Form6 - VIP Selection  
+                        formTypeName == "frmCheckOut" ||            // Form7 - Checkout
+                        formTypeName == "frmSelectUpper" ||         // Form8 - Upper Box Selection
+                        formTypeName == "frmSelectGenAd" ||         // Form9 - General Admission Selection
+                        formTypeName == "frmPaymentMethod" ||       // Form10 - Payment Method
+                        formTypeName == "frmSendPayment" ||         // Form11 - Send Payment
+                        form.Name.Contains("Payment") || 
+                        form.Name.Contains("Select") || 
+                        form.Name.Contains("CheckOut") ||
+                        form.Name.Contains("Concert") ||
+                        form == this)
+                    {
+                        if (form != thanksForm) // Don't close the thanks form
+                        {
+                            try
+                            {
+                                form.Close();
+                            }
+                            catch (Exception ex)
+                            {
+                                // Log but don't stop the process
+                                System.Diagnostics.Debug.WriteLine($"Error closing form {form.Name}: {ex.Message}");
+                            }
+                        }
+                    }
                 }
             }
             catch (Exception ex)

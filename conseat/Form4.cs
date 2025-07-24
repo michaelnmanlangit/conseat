@@ -55,10 +55,26 @@ namespace conseat
         private void btnSelectSeat_Click(object sender, EventArgs e)
         {
             frmSelectSeat selectSeatForm = new frmSelectSeat();
-            selectSeatForm.ShowDialog(); // or Show()
+            
+            // Instead of using SessionManager.ShowModalDialog, use a custom approach
+            // that will close this form when the seat selection process completes
+            this.Hide();
+            
+            selectSeatForm.FormClosed += (s, args) => {
+                // When seat selection closes, close this concert details form too
+                // (the payment flow will handle showing the thanks form)
+                this.Close();
+            };
+            
+            selectSeatForm.ShowDialog();
         }
 
         private void lblVenue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDate_Click(object sender, EventArgs e)
         {
 
         }

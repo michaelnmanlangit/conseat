@@ -51,10 +51,9 @@
             this.rbtnGcash.AutoSize = true;
             this.rbtnGcash.BackColor = System.Drawing.Color.DodgerBlue;
             this.rbtnGcash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnGcash.Location = new System.Drawing.Point(87, 330);
-            this.rbtnGcash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnGcash.Location = new System.Drawing.Point(65, 268);
             this.rbtnGcash.Name = "rbtnGcash";
-            this.rbtnGcash.Size = new System.Drawing.Size(100, 29);
+            this.rbtnGcash.Size = new System.Drawing.Size(82, 24);
             this.rbtnGcash.TabIndex = 18;
             this.rbtnGcash.TabStop = true;
             this.rbtnGcash.Text = "GCash";
@@ -65,10 +64,9 @@
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(220, 212);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrice.Location = new System.Drawing.Point(165, 172);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(86, 25);
+            this.lblPrice.Size = new System.Drawing.Size(71, 20);
             this.lblPrice.TabIndex = 17;
             this.lblPrice.Text = "₱ 2,500";
             this.lblPrice.Click += new System.EventHandler(this.lblPrice_Click);
@@ -77,10 +75,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(129, 212);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(97, 172);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 25);
+            this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 16;
             this.label3.Text = "TOTAL:";
             // 
@@ -90,10 +87,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(27, 152);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(20, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(375, 16);
+            this.label2.Size = new System.Drawing.Size(297, 13);
             this.label2.TabIndex = 14;
             this.label2.Text = "Choose your preferred payment method and click \'PROCEED\'";
             // 
@@ -103,10 +99,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(133, 102);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(100, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 25);
+            this.label1.Size = new System.Drawing.Size(143, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "Payment method";
             // 
@@ -114,10 +109,9 @@
             // 
             this.rbtnPaymaya.AutoSize = true;
             this.rbtnPaymaya.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnPaymaya.Location = new System.Drawing.Point(33, 11);
-            this.rbtnPaymaya.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnPaymaya.Location = new System.Drawing.Point(25, 9);
             this.rbtnPaymaya.Name = "rbtnPaymaya";
-            this.rbtnPaymaya.Size = new System.Drawing.Size(123, 29);
+            this.rbtnPaymaya.Size = new System.Drawing.Size(98, 24);
             this.rbtnPaymaya.TabIndex = 6;
             this.rbtnPaymaya.TabStop = true;
             this.rbtnPaymaya.Text = "PayMaya";
@@ -129,20 +123,19 @@
             this.panel2.BackColor = System.Drawing.Color.SpringGreen;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.rbtnPaymaya);
-            this.panel2.Location = new System.Drawing.Point(49, 390);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(37, 317);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(341, 50);
+            this.panel2.Size = new System.Drawing.Size(256, 41);
             this.panel2.TabIndex = 23;
             // 
             // btnProceed
             // 
             this.btnProceed.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProceed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProceed.Location = new System.Drawing.Point(135, 556);
-            this.btnProceed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProceed.Location = new System.Drawing.Point(101, 452);
             this.btnProceed.Name = "btnProceed";
-            this.btnProceed.Size = new System.Drawing.Size(163, 44);
+            this.btnProceed.Size = new System.Drawing.Size(122, 36);
             this.btnProceed.TabIndex = 20;
             this.btnProceed.Text = "PROCEED";
             this.btnProceed.UseVisualStyleBackColor = false;
@@ -153,10 +146,9 @@
             this.rbtnCreditCard.AutoSize = true;
             this.rbtnCreditCard.BackColor = System.Drawing.Color.Goldenrod;
             this.rbtnCreditCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnCreditCard.Location = new System.Drawing.Point(83, 476);
-            this.rbtnCreditCard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnCreditCard.Location = new System.Drawing.Point(62, 387);
             this.rbtnCreditCard.Name = "rbtnCreditCard";
-            this.rbtnCreditCard.Size = new System.Drawing.Size(217, 29);
+            this.rbtnCreditCard.Size = new System.Drawing.Size(181, 24);
             this.rbtnCreditCard.TabIndex = 19;
             this.rbtnCreditCard.TabStop = true;
             this.rbtnCreditCard.Text = "Credit or debit card";
@@ -167,39 +159,35 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(49, 318);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(37, 258);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(341, 50);
+            this.panel1.Size = new System.Drawing.Size(256, 41);
             this.panel1.TabIndex = 22;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Goldenrod;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(49, 465);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(37, 378);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(341, 50);
+            this.panel3.Size = new System.Drawing.Size(256, 41);
             this.panel3.TabIndex = 25;
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(49, 202);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(37, 164);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(341, 50);
+            this.panel4.Size = new System.Drawing.Size(256, 41);
             this.panel4.TabIndex = 24;
             // 
             // picLogo
             // 
             this.picLogo.BackColor = System.Drawing.Color.Transparent;
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(16, 15);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLogo.Location = new System.Drawing.Point(12, 12);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(47, 43);
+            this.picLogo.Size = new System.Drawing.Size(35, 35);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 26;
             this.picLogo.TabStop = false;
@@ -207,11 +195,11 @@
             // 
             // frmPaymentMethod
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(445, 641);
+            this.ClientSize = new System.Drawing.Size(334, 521);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.rbtnGcash);
             this.Controls.Add(this.lblPrice);
@@ -225,7 +213,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPaymentMethod";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form10";
